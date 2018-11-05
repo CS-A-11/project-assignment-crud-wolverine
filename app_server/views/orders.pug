@@ -1,0 +1,141 @@
+doctype html
+head
+  title Order
+  link(rel='stylesheet', href='/stylesheets/bootstraporder.css')
+  // jQuery (necessary for Bootstrap's JavaScript plugins)
+  script(src='/javascripts/js/jquery.min1.js')
+  // Custom Theme files
+  link(rel='stylesheet', href='/stylesheets/styleorder.css')
+  // Custom Theme files
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  script(type='application/x-javascript').
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+  // webfont
+  link(href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic', rel='stylesheet', type='text/css')
+  link(href='//fonts.googleapis.com/css?family=Lobster+Two:400,400italic,700,700italic', rel='stylesheet', type='text/css')
+  // Animation
+  script(src='/javascripts/js/wow.min.js')
+  link(rel='stylesheet', href='/stylesheets/animateorder.css')
+  script.
+    new WOW().init();
+  script(type='text/javascript', src='/javascripts/js/move-top.js')
+  script(type='text/javascript', src='/javascripts/js/easing.js')
+  script(type='text/javascript').
+    jQuery(document).ready(function($) {
+    $(".scroll").click(function(event){
+    event.preventDefault();
+    $('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+    });
+    });
+  script(src='/javascripts/js/jquery.carouFredSel-6.1.0-packed.js')
+  script(src='/javascripts/js/tms-0.4.1.js')
+  script.
+    $(window).load(function(){
+    $('.slider')._TMS({
+    show:0,
+    pauseOnHover:false,
+    prevBu:'.prev',
+    nextBu:'.next',
+    playBu:false,
+    duration:800,
+    preset:'fade',
+    pagination:true,//'.pagination',true,'<ul></ul>'
+    pagNums:false,
+    slideshow:8000,
+    numStatus:false,
+    banners:false,
+    waitBannerAnimation:false,
+    progressBar:false
+    })
+    });
+    $(window).load (
+    function(){$('.carousel1').carouFredSel({auto: false,prev: '.prev',next: '.next', width: 960, items: {
+    visible : {min: 1,
+    max: 4
+    },
+    height: 'auto',
+    width: 240,
+    }, responsive: false,
+    scroll: 1,
+    mousewheel: false,
+    swipe: {onMouse: false, onTouch: false}});
+    });
+  script(src='/javascripts/js/jquery.easydropdown.js')
+  script(src='/javascripts/js/simpleCart.min.js')
+  script.
+    function validation() {
+    var x = document.myform.restlocname.value;
+    if (x.length == "") {
+    alert("Resturant location can't be blank");
+    return false;
+    }
+    }
+// header-section-starts
+.header
+  .container
+    .top-header
+      .logo
+        a(href='index.html')
+          img.img-responsive(src='images/logo.png', alt='')
+      .queries
+      .clearfix
+  .menu-bar
+    .container
+      .top-menu
+        ul
+          li
+            a(href='index.html') Home
+          |               |
+          li.active
+            a(href='order.html') Order
+          |               |
+          li
+            a(href='contact.html') contact
+          .clearfix
+      .login-section
+        ul
+          li
+            a(href='login.html') Login
+          |               |
+          li
+            a(href='register.html') Register
+          |               |
+          .clearfix
+      .clearfix
+// header-section-ends
+form.form_post(action='#', name='myform', method='post', onsubmit='return validation()')
+  .order-section-page
+    .ordering-form
+      .container
+        .order-form-head.text-center.wow.bounceInLeft(data-wow-delay='0.4s')
+          h3 Order Form
+        .col-md-6.order-form-grids
+          .order-form-grid.wow.fadeInLeft(data-wow-delay='0.4s')
+            h5 Order Information
+            span Type of Order
+            .dropdown-button
+              select.dropdown(tabindex='9', data-settings='{"wrapperClass":"flat"}')
+                option(value='0') Pick up
+                option(value='1') Delivery
+            span Restaurant Location
+            input.text(style='', type='text', name='name', placeholder='Resturant Location ', required='')
+            br
+            span Location name
+            br
+            input.text(style='', type='text', name='locname', placeholder='Location name', required='')
+            br
+            span cuisine-name
+            br
+            input.text(style='', type='text', name='cusinename', placeholder='Cuisine name', required='')
+            input.text(type='text', name='time',value='Time', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Time';}", required='')
+            br
+            .wow.swing.animated(data-wow-delay='0.4s')
+              input(type='Submit', value='order now')
+        .col-md-6.ordering-image.wow.bounceIn(data-wow-delay='0.4s')
+          img.img-responsive(src='https://edge.alluremedia.com.au/m/g/2016/05/shutterstock_266811803_1080.jpg', alt='')
+// footer-section-starts
+.footer
+  .container
+// footer-section-ends
+
+

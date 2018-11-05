@@ -1,0 +1,403 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  title FoodSetGo!
+  // Favicon
+  link(rel='shortcut icon', href='/stylesheets/favicon.ico', type='image/x-icon')
+  // Font awesome
+  link(href='/stylesheets/font-awesome.css', rel='stylesheet')
+  // Bootstrap
+  link(href='/stylesheets/bootstrap.css', rel='stylesheet')
+  // Slick slider
+  link(rel='stylesheet', type='text/css', href='/stylesheets/slick.css')
+  // Date Picker
+  link(rel='stylesheet', type='text/css', href='/stylesheets/bootstrap-datepicker.css')
+  // Gallery Lightbox
+  link(href='/stylesheets/magnific-popup.css', rel='stylesheet')
+  // Theme color
+  link#switcher(href='/stylesheets/theme-color/default-theme.css', rel='stylesheet')
+  // Main style sheet
+  link(rel='stylesheet', href='/stylesheets/style2.css')
+  // Google Fonts
+  // Prata for body
+  link(href='/fonts/https://fonts.googleapis.com/css?family=Prata', rel='stylesheet', type='text/css')
+  // Tangerine for small title
+  link(href='/fonts/https://fonts.googleapis.com/css?family=Tangerine', rel='stylesheet', type='text/css')
+  // Open Sans for title
+  link(href='/fonts/https://fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet', type='text/css')
+// START SCROLL TOP BUTTON
+a.scrollToTop(href='#')
+  i.fa.fa-angle-up
+// END SCROLL TOP BUTTON
+// Start header section
+
+header#mu-header
+  nav.navbar.navbar-default.mu-main-navbar(role='navigation')
+    .container
+      .navbar-header
+        // FOR MOBILE VIEW COLLAPSED BUTTON
+        button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        // LOGO
+        // Text based logo
+        a#size.navbar-brand(href='index.html')
+          img(src='/images/logo1.png')
+        a.navbar-brand(href='#home')
+          | FoodSet
+          span Go
+        // Image based logo
+        // <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Logo img"></a>
+      #navbar.navbar-collapse.collapse
+        ul#top-menu.nav.navbar-nav.navbar-right.mu-main-nav
+
+          li
+            a(href='#mu-about-us') ABOUT US
+          li
+            a(href='orders') ORDERS
+          li
+            a(href='#mu-gallery') GALLERY
+          // <li><a href="#mu-chef">OUR CHEFS</a></li>
+          li
+            a(href='#mu-contact') CONTACT
+          li
+            a(href='login') LOG IN
+          li
+            a(href='signup') SIGN UP
+          li
+            a(href='feedback/add') FEEDBACK
+      // /.nav-collapse
+// End header section
+// Start slider
+section#mu-slider
+  .mu-slider-area
+    // Top slider
+    .mu-top-slider
+      // Top slider single slide
+      .mu-top-slider-single
+        img(src='images/slider/13.jpg', alt='img')
+        // Top slider content
+        .mu-top-slider-content
+          span.mu-slider-small-title Welcome
+          h2.mu-slider-title To FoodSetGo!
+          p Have your favorite restaurants delivered to your door. Order now with FoodSetGo!
+          
+          a.mu-readmore-btn.mu-reservation-btn(href='#mu-reservation') PLACE YOUR ORDER
+           a(href='orders')
+           
+      // / Top slider content
+      // / Top slider single slide
+      // Top slider single slide
+      .mu-top-slider-single
+        img(src='images/slider/11.jpg', alt='img')
+        // Top slider content
+        .mu-top-slider-content
+          span.mu-slider-small-title Over
+          h2.mu-slider-title 500+ Satisfied Customers
+          p Share your experience with us now!
+          a.mu-readmore-btn.mu-reservation-btn(href='#mu-reservation')  GIVE FEEDBACK
+          //- a(href='feedback/add') GIVE FEEDBACK
+        // / Top slider content
+      // / Top slider single slide
+      // Top slider single slide
+      .mu-top-slider-single
+        img(src='images/slider/12.jpg', alt='img')
+        // Top slider content
+        .mu-top-slider-content
+          span.mu-slider-small-title Over
+          h2.mu-slider-title 1000+ Recipes  
+          p Share your own recipe with us today!
+          a.mu-readmore-btn.mu-reservation-btn(href='#mu-reservation') ADD YOUR RECIPE
+        // / Top slider content
+      // / Top slider single slide
+// End slider
+// Start About us
+section#mu-about-us
+  .container
+    .row
+      .col-md-12
+        .mu-about-us-area
+          .mu-title
+            span.mu-subtitle Discover
+            h2 ABOUT US
+          .row
+            .col-md-6
+              .mu-about-us-left
+                img(src='images/about-us.png', alt='img')
+            .col-md-6
+              .mu-about-us-right
+                p
+                  | For all the food lovers who are eager to taste the yummiest food and never want to miss an opportunity to savor delicious items, FoodSetGo is the ideal platform for you. We provide food delivery services without charging a single rupee.
+                  | All a customer needs is to enter his location, select restaurant from where he can order food and have it at his doorstep.
+                |                    &#x9;Here are some common reasons, why you should always choose FoodSetGo to satisfy your hunger:&#x9;&#x9;&#x9;  
+                ul
+                  li
+                    b  No Frustration, No Misunderstanding 
+                    |  Just go online, place your order and receive you favorite food at your home within few minutes.
+                  li
+                    b  24/7 service 
+                    |  No matter when you are felling hungry, FoodSetGo is always available for your services. You can place your order at any time.
+                  li
+                    b  Menu simpler to Manage 
+                    |  An online menu is simple and easy to understand, as FoodSetGo gives you detail description of each item.
+                  li
+                    b  Modify or cancel your order 
+                    |  FoodSetGo offers the facility to our customers to change or cancel their order within 15 minutes after placing order.
+                p
+                  | &quot;Bringing good food into your everyday.&quot; That&apos;s our mission.
+                  | That means we don&apos;t just deliver--we bring it, always going the extra mile to make your experience memorable.
+// End About us
+// Start Counter Section
+section#mu-counter
+  .mu-counter-overlay
+    .container
+      .row
+        .col-md-12
+          .mu-counter-area
+            ul.mu-counter-nav
+              li.col-md-3.col-sm-3.col-xs-12
+                .mu-single-counter
+                  span Over
+                  h3
+                    span.counter-value(data-count='150') 0
+                    sup +
+                  p Menu Items
+              li.col-md-3.col-sm-3.col-xs-12
+                .mu-single-counter
+                  span Over
+                  h3
+                    span.counter-value(data-count='200') 0
+                    sup +
+                  p Restaurants
+              li.col-md-3.col-sm-3.col-xs-12
+                .mu-single-counter
+                  span Over
+                  h3
+                    span.counter-value(data-count='45') 0
+                    sup +
+                  p Cuisines
+              li.col-md-3.col-sm-3.col-xs-12
+                .mu-single-counter
+                  span Satisfied
+                  h3
+                    span.counter-value(data-count='500') 0
+                    sup +
+                  p Customers
+// End Counter Section
+
+// Start Gallery
+section#mu-gallery
+  .container
+    .row
+      .col-md-12
+        .mu-gallery-area
+          .mu-title
+            span.mu-subtitle Discover
+            h2 Our Gallery
+          .mu-gallery-content
+            // Start gallery image
+            .mu-gallery-body
+              // start single gallery image
+              .mu-single-gallery.col-md-4
+                .mu-single-gallery-item
+                  figure.mu-single-gallery-img
+                    a.mu-imglink(href='images/gallery/1.jpg')
+                      img(alt='img', src='images/gallery/1.jpg')
+                      .mu-single-gallery-info
+                        img.mu-view-btn(src='images/plus.png', alt='plus icon img')
+              // End single gallery image
+              // start single gallery image
+              .mu-single-gallery.col-md-4
+                .mu-single-gallery-item
+                  figure.mu-single-gallery-img
+                    a.mu-imglink(href='images/gallery/2.jpg')
+                      img(alt='img', src='images/gallery/2.jpg')
+                      .mu-single-gallery-info
+                        img.mu-view-btn(src='images/plus.png', alt='plus icon img')
+              // End single gallery image
+              // start single gallery image
+              .mu-single-gallery.col-md-4
+                .mu-single-gallery-item
+                  figure.mu-single-gallery-img
+                    a.mu-imglink(href='images/gallery/3.jpg')
+                      img(alt='img', src='images/gallery/3.jpg')
+                      .mu-single-gallery-info
+                        img.mu-view-btn(src='images/plus.png', alt='plus icon img')
+              // End single gallery image
+              // start single gallery image
+              .mu-single-gallery.col-md-4
+                .mu-single-gallery-item
+                  figure.mu-single-gallery-img
+                    a.mu-imglink(href='images/gallery/4.jpg')
+                      img(alt='img', src='images/gallery/4.jpg')
+                      .mu-single-gallery-info
+                        img.mu-view-btn(src='images/plus.png', alt='plus icon img')
+              // End single gallery image
+              // start single gallery image
+              .mu-single-gallery.col-md-4
+                .mu-single-gallery-item
+                  figure.mu-single-gallery-img
+                    a.mu-imglink(href='images/gallery/5.jpg')
+                      img(alt='img', src='images/gallery/5.jpg')
+                      .mu-single-gallery-info
+                        img.mu-view-btn(src='images/plus.png', alt='plus icon img')
+              // End single gallery image
+              // start single gallery image
+              .mu-single-gallery.col-md-4
+                .mu-single-gallery-item
+                  figure.mu-single-gallery-img
+                    a.mu-imglink(href='images/gallery/6.jpg')
+                      img(alt='img', src='images/gallery/6.jpg')
+                      .mu-single-gallery-info
+                        img.mu-view-btn(src='images/plus.png', alt='plus icon img')
+              // End single gallery image
+              // start single gallery image
+              .mu-single-gallery.col-md-4
+                .mu-single-gallery-item
+                  figure.mu-single-gallery-img
+                    a.mu-imglink(href='images/gallery/7.jpg')
+                      img(alt='img', src='images/gallery/7.jpg')
+                      .mu-single-gallery-info
+                        img.mu-view-btn(src='images/plus.png', alt='plus icon img')
+              // End single gallery image
+              // start single gallery image
+              .mu-single-gallery.col-md-4
+                .mu-single-gallery-item
+                  figure.mu-single-gallery-img
+                    a.mu-imglink(href='images/gallery/8.jpg')
+                      img(alt='img', src='images/gallery/8.jpg')
+                      .mu-single-gallery-info
+                        img.mu-view-btn(src='images/plus.png', alt='plus icon img')
+              // End single gallery image
+              // start single gallery image
+              .mu-single-gallery.col-md-4
+                .mu-single-gallery-item
+                  figure.mu-single-gallery-img
+                    a.mu-imglink(href='images/gallery/9.jpg')
+                      img(alt='img', src='images/gallery/9.jpg')
+                      .mu-single-gallery-info
+                        img.mu-view-btn(src='images/plus.png', alt='plus icon img')
+              // End single gallery image
+// End Gallery
+// Start Client Testimonial section
+section#mu-client-testimonial
+  .mu-overlay
+    .container
+      .row
+        .col-md-12
+          .mu-client-testimonial-area
+            .mu-title
+              span.mu-subtitle Testimonials
+              h2 What Customers Say
+            // testimonial content
+            .mu-testimonial-content
+              // testimonial slider
+              ul.mu-testimonial-slider
+                li
+                  .mu-testimonial-single
+                    .mu-testimonial-info
+                      p
+                        | Flexible timing, good environment, young culture, workaholic and energetic culture in FoodSetGo.
+                    .mu-testimonial-bio
+                      p - Muneeb
+                li
+                  .mu-testimonial-single
+                    .mu-testimonial-info
+                      p
+                        | Conducive working environment, friendly team leader & colleagues, work-life balance, good perks & benefits
+                    .mu-testimonial-bio
+                      p - Roshan
+                li
+                  .mu-testimonial-single
+                    .mu-testimonial-info
+                      p
+                        | As a FoodSetGo delivery girl working in foodSetGo I'm earning monthly 40k+
+                    .mu-testimonial-bio
+                      p - Hamna
+
+section#mu-contact
+  .container
+    .row
+      .col-md-12
+        .mu-contact-area
+          .mu-title
+            span.mu-subtitle Get In Touch
+            h2 Contact Us
+          .mu-contact-content
+            .row
+              .col-md-6
+                .mu-contact-left
+                  // Email message div
+                  #form-messages
+                  // Start contact form
+                  form#ajax-contact.mu-contact-form(method='post', action='#')
+                    .form-group
+                      label(for='name') Your Name
+                      input#name.form-control(type='text', name='name', placeholder='Name', required='')
+                    .form-group
+                      label(for='email') Email address
+                      input#email.form-control(type='email', name='email', placeholder='Email', required='')
+                    .form-group
+                      label(for='subject') Subject
+                      input#subject.form-control(type='text', name='subject', placeholder='Subject', required='')
+                    .form-group
+                      label(for='message') Message
+                      textarea#message.form-control(name='message', cols='30', rows='10', placeholder='Type Your Message', required='')
+                    button.mu-send-btn(type='submit') Send Message
+              .col-md-6
+                .mu-contact-right
+                  .mu-contact-widget
+                    p
+                      | We are here to answer any questions you may have about FoodSetGo. Reach out to us and we&apos;ll respond as soon as we can.
+                    h3 Office Address
+                    address
+                      p
+                        i.fa.fa-phone
+                        |  UAN: 111-374-374
+                      p
+                        i.fa.fa-envelope-o
+                        | contact@foodsetgo.io
+                      p
+                        i.fa.fa-map-marker
+                        | 24/A Faial Town Opposite P.S.O Petrol Pump, Lahore.
+
+footer#mu-footer
+  .container
+    .row
+      .col-md-12
+        .mu-footer-area
+          .mu-footer-social
+            a(href='#')
+              span.fa.fa-facebook
+            a(href='#')
+              span.fa.fa-twitter
+            a(href='#')
+              span.fa.fa-google-plus
+            a(href='#')
+              span.fa.fa-linkedin
+            a(href='#')
+              span.fa.fa-youtube
+          .mu-footer-copyright
+            p &copy; Copyrights FoodSetGo. All rights reserved.
+
+// End Footer
+// jQuery library
+script(src='/javascripts/jquery.min.js')
+// Include all compiled plugins (below), or include individual files as needed
+script(src='/javascripts/bootstrap.js')
+// Slick slider
+script(type='text/javascript', src='/javascripts/slick.js')
+// Counter
+script(type='text/javascript', src='/javascripts/simple-animated-counter.js')
+// Gallery Lightbox
+script(type='text/javascript', src='/javascripts/jquery.magnific-popup.min.js')
+// Date Picker
+script(type='text/javascript', src='/javascripts/bootstrap-datepicker.js')
+// Ajax contact form
+script(type='text/javascript', src='/javascripts/app.js')
+// Custom js
+script(src='/javascripts/custom.js')

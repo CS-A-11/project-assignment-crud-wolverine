@@ -1,0 +1,40 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title= title
+    //- link(rel='stylesheet', href='/bootstrap/css/amelia.bootstrap.css')
+    //- link(rel='stylesheet', href='/stylesheets/style.css')
+    
+    //- link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet")
+
+  body
+    .navbar.navbar-default.navbar-fixed-top
+      .container
+        .navbar-header
+          a.navbar-brand(href='/') FoodSetGo
+          button.navbar-toggle(type='button',data-toggle = 'collapse', data-target = '#navbar-main')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        #navbar-main.navbar-collapse.collapse 
+        
+          ul.nav.navbar-nav
+            li    
+              a(href = '/about/') About    
+              a(href = '/login/') Login
+              a(href = '/Signup/') Signup
+               a(href = '/orders/') Orders
+               a(href = '/feedback/') Feedback
+              
+    .container
+      block content
+
+      footer
+        .row  
+          .col-xs-12
+            small &copy; FoodSetGo 2018
+
+
+    script(src='/bootstrap/js/bootstrap.min.js')
+

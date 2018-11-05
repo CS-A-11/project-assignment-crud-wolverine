@@ -1,0 +1,152 @@
+doctype html
+head
+  title One Stop Hub
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+  //- link(href='StyleSheet1.css', rel='stylesheet', type='text/css', media='all')
+  link(rel='stylesheet', href='/stylesheets/feedback.css')
+  link(href='//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900', rel='stylesheet', type='text/css')
+  script.
+    function validation() {
+    var x = document.myform.email.value;
+    var atposition = x.indexOf("@");
+    var dotposition = x.lastIndexOf(".");
+    if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= x.length) {
+    alert("Please enter a valid e-mail address ");
+    return false;
+    }
+    var z = document.myform.name.value;
+    var zz = z.charAt(0);
+    if (zz=='@'|| zz=='-' || zz=='.')
+    {
+    alert("Enter a valid name");
+    return false;
+    }
+    var y = document.myform.name.value;
+    if (y == "") {
+    alert("Please enter your name");
+    return false;
+    }
+    if (!isNaN(y)) {
+    alert("Please enter only characters");
+    return false;
+    }
+    }
+  link(href='https://www.jqueryscript.net/css/jquerysctipttop.css', rel='stylesheet', type='text/css')
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+  link(rel='stylesheet', href='css/simple-rating.css')
+  style.
+    html { height: 100vh; }
+    body { color: orange; font-family: 'Open Sans';}
+    .container { max-width: 640px; margin: 150px auto; }
+  script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js', integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN', crossorigin='anonymous')
+  script(src='js/simple-rating.js')
+  script(type='text/javascript').
+    $(document).ready(function () {
+    $('.rating').rating();
+    });
+  script.
+    jQuery.fn.extend({
+    rating: function(options){
+    if(typeof(options)=='undefined') options={};
+    var ratings=[];
+    objs=this;
+    if(objs.length){
+    for(var i=0;i<objs.length;i++){
+    ratings.push(new simpleRating(options,objs[i]));
+    }
+    }
+    },
+    });
+    class simpleRating
+    {
+    constructor(options,obj)
+    {
+    this.obj=obj;
+    this.options=options;
+    this.rating=0;
+    this.init();
+    }
+    init()
+    {
+    var html='<div class="simple-rating star-rating">';
+    for(var i=0;i<5;i++){html+='<i class="fa fa-star-o" data-rating="'+(i+1)+'"></i>';}
+    html+='</div>';
+    $(this.obj)
+    .attr('type','hidden')
+    .after(html);
+    $(this.obj).next().children().click({classObj:this},function(e){
+    e.data.classObj.rate(this);
+    });
+    $(this.obj).next().children().mouseenter({classObj:this},function(e){
+    e.data.classObj.setstars($(this).data('rating'));
+    });
+    $(this.obj).next().children().mouseleave({classObj:this},function(e){
+    e.data.classObj.setstars(e.data.classObj.rating);
+    });
+    }
+    rate(obj)
+    {
+    var rating=$(obj).data('rating');
+    $(obj).parent().prev().val(rating);
+    this.rating=rating;
+    this.refresh();
+    }
+    refresh()
+    {
+    this.setstars(this.rating);
+    }
+    setstars(rating)
+    {
+    var stars=$(this.obj).next().children();
+    for(var i=0;i<5;i++){
+    var starObj=$(this.obj).next().children()[i];
+    if(i<rating){
+    $(starObj).removeClass('fa-star-o');
+    $(starObj).addClass('fa-star');
+    }else{
+    $(starObj).addClass('fa-star-o');
+    $(starObj).removeClass('fa-star');
+    }
+    }
+    }
+    }
+// banner
+#pic
+  .center-container
+    .main
+      h1.head FEEDBACK
+      .main_grid
+        form.form_post(action='#', name='myform', method='post', onsubmit='return validation()')
+          .agileits_main_grid.l_main_grid
+            span.agileits_grid
+              label Your Name 
+              input#na(style='color:black', type='text', name='name', placeholder='Your Name', required='')
+          .agileits_main_grid.l_main_grid
+            span.agileits_grid
+              label Your Email 
+              input(style='color:black', type='text', name='email', placeholder='Your Email', required='')
+          .agileits_main_grid.l_main_grid
+            span.agileits_grid
+              label Resturant Name 
+              //input(style='color:black', type='text', name='restname', placeholder='Resturant Name', required='')
+              <input list="restname" name="restname", placeholder="Restaurant Name", required="">
+              <datalist id="restname">
+              <option value="KFC">
+              <option value="Pizza hut">
+              <option value="Burger Lab">
+              //<option value="Opera">
+              //<option value="Safari">
+              </datalist>
+          .agileits_main_grid.l_main_grid
+            span.agileits_grid
+              label Comments 
+            textarea#com(style='color:black', name='comment', rows='5', cols='40', placeholder='Comment')
+          .agileits_main_grid.l_main_grid
+            span.agileits_grid
+              label Rating 
+              input.rating(name='rating',required='')
+          .main_grid2
+            .main_grid2_right
+              input(type='Submit', value='Submit')
+  // //footer

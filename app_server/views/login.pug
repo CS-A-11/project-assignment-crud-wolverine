@@ -1,0 +1,63 @@
+
+doctype html
+html
+  head
+     meta(name='viewport', content='width=device-width, initial-scale=1')
+     link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet")
+     link(rel='stylesheet', href='/stylesheets/login.css')
+ 
+  
+  script.
+    function validation() {
+    var x = document.myform.email.value;
+    var atposition = x.indexOf("@");
+    var dotposition = x.lastIndexOf(".");
+    if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= x.length) {
+    alert("Please enter a valid e-mail address \\n atpostion:" + atposition + "\n dotposition:" + dotposition);
+    return false;
+    }
+    var password = document.myform.password.value;
+    if (password == null || password == "") {
+    alert("password can't be blank");
+    return false;
+    }
+    else if (password.length < 8) {
+    alert("Password must be at least 8 characters long.");
+    return false;
+    }
+    }
+  title One Stop Hub
+  // for-mobile-apps
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  meta(http-equiv='Content-Type' content='text/html; charset=utf-8')
+  script(type='application/x-javascript').
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+    function hideURLbar(){ window.scrollTo(0,1); }
+  // //for-mobile-apps
+  // //custom-theme
+  link(href='StyleSheet1.css' rel='stylesheet' type='text/css' media='all')
+  // js
+  // <script type="text/javascript" src="JavaScript1.js"></script>
+  link(href='//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css')
+// banner
+.pic
+  .center-container
+    .main
+      h1.head Log In
+      .main_grid
+        // <form name ="myform" action="#"  onsubmit="return validateForm()" method="post" class="form_post">
+        form(name='myform' method='post' action='/login' onsubmit='return validation();')
+          .agileits_main_grid.l_main_grid
+            span.agileits_grid
+              label Your Email 
+              input(type='text' name='email' placeholder='Your Email' required='')
+          .agileits_main_grid.l_main_grid
+            span.agileits_grid
+              label Your Password 
+              input#psw(type='password' name='password' placeholder='Your Password' required='')
+          .clear
+          // </div>
+          .main_grid2
+            .main_grid2_right
+              input(type='submit' value='Submit')
+  // //footer

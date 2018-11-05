@@ -1,0 +1,27 @@
+extends layout
+
+include _includes/sharedHTMLfunctions
+
+block content
+  #banner.page-header
+    .row
+      .col-lg-6
+        h1= pageHeader.title
+         small &nbsp;#{pageHeader.strapline}
+    .row
+    //- .col-xs-12.col-sm-8
+    //-   .row.list-group
+    //-     each home in homes
+    //-       .col-xs-12.list-group-item
+    //-         h4 
+    //-           a(href="/home")= home.name
+    //-           small &nbsp;
+    //-             +outputRating(home.rating)
+    //-           span.badge.pull-right.badge-default= home.distance
+    //-         p.address= home.address
+    //-         p
+    //-           each facility in home.facilities
+    //-             span.label.label-warning= facility
+                
+    //- .col-xs-12.col-sm-4 
+    //-   p.lead= sidebar
