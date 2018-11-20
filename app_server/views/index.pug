@@ -53,23 +53,44 @@ header#mu-header
         // Image based logo
         // <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Logo img"></a>
       #navbar.navbar-collapse.collapse
-        ul#top-menu.nav.navbar-nav.navbar-right.mu-main-nav
+        if user
+          ul#top-menu.nav.navbar-nav.navbar-right.mu-main-nav
 
-          li
-            a(href='#mu-about-us') ABOUT US
-          li
-            a(href='orders') ORDERS
-          li
-            a(href='#mu-gallery') GALLERY
-          // <li><a href="#mu-chef">OUR CHEFS</a></li>
-          li
-            a(href='#mu-contact') CONTACT
-          li
-            a(href='login') LOG IN
-          li
-            a(href='signup') SIGN UP
-          li
-            a(href='feedback/add') FEEDBACK
+            li
+              a(href='#mu-about-us') ABOUT US
+
+            li
+              a(href='#mu-gallery') GALLERY
+
+            li
+              a(href='orders') ORDERS
+
+            li
+              a(href='feedback/add') FEEDBACK
+
+            li
+              a(href='#mu-contact') CONTACT
+
+            li
+              a(href='/logout') LOGOUT
+        else
+          ul#top-menu.nav.navbar-nav.navbar-right.mu-main-nav
+            
+            li
+              a(href='#mu-about-us') ABOUT US
+
+            li
+              a(href='#mu-gallery') GALLERY
+            // <li><a href="#mu-chef">OUR CHEFS</a></li>
+            
+            li
+              a(href='#mu-contact') CONTACT
+
+            li
+              a(href='login') LOG IN
+            li
+              a(href='signup') SIGN UP
+            
       // /.nav-collapse
 // End header section
 // Start slider

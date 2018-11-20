@@ -381,11 +381,7 @@ option{
 	width: 94.5%;
 	height:20px;
 }
-.main_grid input[type="list"], #category, #category1, #risk, #priority, .main_grid input[type="restname"], .main_grid textarea {
-	width: 94.5%;
-	height:40px;
-	left:50px;
-}
+
 .main_grid span label i {
 	right: 71%;
 }

@@ -19,10 +19,13 @@ var ctrlfeedback = require("../controllers/feedback");
   router.post("/",ctrlmain.contact2);
 /* Other pages*/
 router.get("/about", ctrlOthers.about);
-router.get("/login", ctrllogin.login);
 
-router.get("/signUp", ctrlsignUp.signUp);
-router.post("/signUp",ctrlsignUp.signUpCreate);
+router.get("/login", ctrllogin.login);
+router.post("/login", ctrllogin.userLogin);
+router.get("/logout", ctrllogin.logout);
+
+router.get("/signup", ctrlsignUp.signUp);
+router.post("/signup",ctrlsignUp.signUpCreate);
 
 router.get("/orders", ctrlorders.orders);
 router.post("/orders", ctrlorders.orderSchema);

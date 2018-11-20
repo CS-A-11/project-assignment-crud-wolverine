@@ -24,7 +24,7 @@ module.exports.feedCreate = function(req, res) {
         console.log(err);
         return;
       } else {
-        console.log(review);        
+        console.log(review);       
         res.redirect("/");
       }
     }
