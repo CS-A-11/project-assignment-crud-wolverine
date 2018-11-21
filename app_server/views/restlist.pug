@@ -1,0 +1,109 @@
+doctype html
+head
+  title Restaurants
+  link(rel='stylesheet', href='/stylesheets/bootstraporder.css')
+  // jQuery (necessary for Bootstrap's JavaScript plugins)
+  script(src='/javascripts/js/jquery.min1.js')
+  // Custom Theme files
+  link(rel='stylesheet', href='/stylesheets/styleorder.css')
+  // Custom Theme files
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  script(type='application/x-javascript').
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+  // webfont
+  link(href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic', rel='stylesheet', type='text/css')
+  link(href='//fonts.googleapis.com/css?family=Lobster+Two:400,400italic,700,700italic', rel='stylesheet', type='text/css')
+  // Animation
+  script(src='/javascripts/js/wow.min.js')
+  link(rel='stylesheet', href='/stylesheets/animateorder.css')
+  script.
+    new WOW().init();
+  script(type='text/javascript', src='js/move-top.js')
+  script(type='text/javascript', src='js/easing.js')
+  script(type='text/javascript').
+    jQuery(document).ready(function($) {
+    $(".scroll").click(function(event){
+    event.preventDefault();
+    $('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+    });
+    });
+  script(src='js/simpleCart.min.js')
+// header-section-starts
+.header
+  .container
+    .top-header
+      .clearfix
+  .menu-bar
+    .container
+      .top-menu
+        ul
+          li
+            a(href='index') Home
+          |               |
+          li
+            a(href='contact') contact
+          .clearfix
+      .login-section
+        ul
+          li
+            a(href='login.pug') Login
+          |               |
+          li
+            a(href='register.pug') Register
+          |               |
+          .clearfix
+      .clearfix
+// header-section-ends
+// content-section-starts
+.Popular-Restaurants-content
+  .Popular-Restaurants-grids
+    .container
+      .Popular-Restaurants-grid.wow.fadeInRight(data-wow-delay='0.4s')
+        .col-md-3.restaurent-logo
+          img.img-responsive(src='./images/restaurent-logo1.jpg', alt='')
+        .col-md-2.restaurent-title
+          .logo-title
+            h4
+              a(href='restinfo.html') pizza hut
+          .rating
+            span ratings
+            a(href='#')
+              img.img-responsive(src='images/star1.png', alt='')
+        .col-md-7.buy
+          a.morebtn.hvr-rectangle-in(href='/menu') buy
+        .clearfix
+      .Popular-Restaurants-grid.wow.fadeInLeft(data-wow-delay='0.4s')
+        .col-md-3.restaurent-logo
+          img.img-responsive(src='images/restaurent-logo2.jpg', alt='')
+        .col-md-2.restaurent-title
+          .logo-title.logo-title-
+          each rest1 in rest
+            h4
+              //- a(href='restinfo') Subway
+              a(href="/rest/"+ #{rest1._id} )=#{rest1.name}
+          .rating
+            span ratings
+            a(href='#')
+              img.img-responsive(src='images/star2.png', alt='')
+              | (005)
+        .col-md-7.buy
+          a.morebtn.hvr-rectangle-in(href='orders-list.html') buy
+        .clearfix
+      .footer
+        .container
+          p.wow.fadeInLeft(data-wow-delay='0.4s') &copy; FOODSETGO
+      // footer-section-ends
+      script(type='text/javascript').
+        $(document).ready(function() {
+        /*
+        var defaults = {
+        containerID: 'toTop', // fading element id
+        containerHoverID: 'toTopHover', // fading element hover id
+        scrollSpeed: 1200,
+        easingType: 'linear'
+        };
+        */
+        $().UItoTop({ easingType: 'easeOutQuart' });
+        });
+      a#toTop(href='#', style='display: block;')
+        span#toTopHover(style='opacity: 1;')  

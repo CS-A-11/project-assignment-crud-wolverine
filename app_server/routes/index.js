@@ -9,8 +9,10 @@ var ctrllogin = require("../controllers/login");
 var ctrlsignUp = require("../controllers/signUp");
 var ctrlorders = require("../controllers/orders");
 var ctrlfeedback = require("../controllers/feedback");
- var ctrlmain=require("../controllers/main");
-/* Locations pages */
+var ctrlmain=require("../controllers/main");
+var ctrlrest=require("../controllers/rest");
+var ctrlmenu=require("../controllers/menu");
+ /* Locations pages */
 //  router.get("/", ctrlHome.homelist);
 //  router.get("/location", ctrlHome.locationInfo);
 //  router.get("/location/review/new", ctrlHome.addReview); 
@@ -32,7 +34,27 @@ router.post("/orders", ctrlorders.orderSchema);
 
 
 router.get("/feedback/add", ctrlfeedback.feedRead);
-router.post("/feedback/add",ctrlfeedback.feedCreate);
-router.get("/feedback/:feedbackid",ctrlfeedback.feedReadrev);
+router.post("/rest/:restid/reviews", ctrlfeedback.reviewsCreate);
+router.get(
+  "/rest/:restid/reviews/:reviewid",
+  ctrlfeedback.reviewsReadOne
+);
+router.put(
+  "/rest/:restid/reviews/:reviewid",
+  ctrlfeedback.reviewsUpdateOne
+);
+router.delete(
+  "/rest/:restid/reviews/:reviewid",
+  ctrlfeedback.reviewsDeleteOne
+);
+//router.post("/feedback/add",ctrlfeedback.feedCreate);
+//router.get("/feedback/:feedbackid",ctrlfeedback.feedReadrev);
+
+router.get("/rest",ctrlrest.home);
+router.get("/rest", ctrlrest.restListByDistance);
+//router.post("/rest", ctrlrest.restCreate);
+router.get("/rest/:restid", ctrlrest.restReadOne);
+
+router.get("/menu",ctrlmenu.home);
 
 module.exports = router;

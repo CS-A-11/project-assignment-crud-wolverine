@@ -1,4 +1,4 @@
- var mongoose = require( 'mongoose' );
+/*  var mongoose = require( 'mongoose' );
 
 
  var contactSchema = new mongoose.Schema({ 
@@ -57,4 +57,30 @@ mongoose.model("Restaurant", restSchema);
 
 mongoose.model("Location", locationSchema); 
 mongoose.model("Contact", contactSchema); 
-// mongoose.model("Menu", menuSchema);  
+// mongoose.model("Menu", menuSchema);   */
+
+var mongoose = require("mongoose");
+var reviewSchema = new mongoose.Schema({
+  author: String,
+  rating: { type: Number, required: true, min: 0, max: 5 },
+  reviewText: String,
+  createdOn: { type: Date, default: Date.now },
+  userId: String
+});
+
+var restSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  address: String,
+  rating: { type: Number, default: 0, min: 0, max: 5 },
+  facilities: [String],
+  reviews: [reviewSchema],
+  reviews: {type: mongoose.Schema.Types.ObjectId, ref: 'reviews'}
+});
+
+//module.exports.Loc =
+var restaurant = mongoose.model("restaurant", restSchema);
+module.exports = restaurant;
+
+
+
+

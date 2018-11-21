@@ -1,0 +1,395 @@
+doctype html
+head
+  title MENU
+  link(rel='stylesheet', href='/stylesheets/bootstraporder.css')
+  // jQuery (necessary for Bootstrap's JavaScript plugins)
+  script(src='/javascripts/js/jquery.min1.js')
+  // Custom Theme files
+  link(rel='stylesheet', href='/stylesheets/styleorder.css')
+  // Custom Theme files
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  script(type='application/x-javascript').
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+  // webfont
+  link(href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic', rel='stylesheet', type='text/css')
+  link(href='//fonts.googleapis.com/css?family=Lobster+Two:400,400italic,700,700italic', rel='stylesheet', type='text/css')
+  // Animation
+  script(src='/javascripts/js/wow.min.js')
+  link(rel='stylesheet', href='/stylesheets/animateorder.css')
+  script.
+    new WOW().init();
+  script(type='text/javascript', src='js/move-top.js')
+  script(type='text/javascript', src='js/easing.js')
+  script(type='text/javascript').
+    jQuery(document).ready(function($) {
+    $(".scroll").click(function(event){
+    event.preventDefault();
+    $('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+    });
+    });
+  script(src='js/simpleCart.min.js')
+// header-section-starts
+.header
+  .container
+    .top-header
+      .header-right
+        .cart.box_1
+          a(href='checkout.html')
+            h3
+              span.simpleCart_total  $0.00 
+              |  (
+              span#simpleCart_quantity.simpleCart_quantity  0 
+              |  items)
+              img(src='images/bag.png', alt='')
+          p
+            a.simpleCart_empty(href='javascript:;') Empty card
+          .clearfix  
+      .clearfix
+  .menu-bar
+    .container
+      .top-menu
+        ul
+          li
+            a(href='/') Home
+          |               |
+          li
+            a(href='orders') Order
+          |               |
+          li
+            a(href='/#mu-contact') contact
+          .clearfix
+      .clearfix
+// header-section-ends
+// content-section-starts
+.orders
+  .container
+    .order-top
+      li.item-lists
+        h4 Pizzas
+        p Exotic Combo of Cheese &amp; Basil
+        p  Capsicum, Tomatoes, Onion
+        p  Chicken Tikka &amp; Cheese
+        p  Chicken Stripse
+      li.item-lists
+        .special-info.grid_1.simpleCart_shelfItem
+          h4 Price
+          .pre-top
+            .pr-left
+              .item_add
+                span.item_price
+                  h6 ONLY $30.00
+            .pr-right
+              .item_add
+                span.item_price
+                  a(href='#') Pick
+            .clearfix
+          .pre-top
+            .pr-left
+              .item_add
+                span.item_price
+                  h6 ONLY $30.00
+            .pr-right
+              .item_add
+                span.item_price
+                  a(href='#') Pick
+            .clearfix
+          .pre-top
+            .pr-left
+              .item_add
+                span.item_price
+                  h6 ONLY $30.00
+            .pr-right
+              .item_add
+                span.item_price
+                  a(href='#') Pick
+            .clearfix
+          .pre-top
+            .pr-left
+              .item_add
+                span.item_price
+                  h6 ONLY $30.00
+            .pr-right
+              .item_add
+                span.item_price
+                  a(href='#') Pick
+            .clearfix
+      .clearfix
+    .order-top
+      li.item-lists
+        h4 Burgers
+        p Vegetable Patty With Coleslaw
+        p Fajita Paneer &amp; Vegetable
+        p Chicken Patty With Vegetable
+        p Chicken Cut in Mexican Style
+      li.item-lists
+        .special-info.grid_1.simpleCart_shelfItem
+          h4 Price
+          .pre-top
+            .pr-left
+              .item_add
+                span.item_price
+                  h6 ONLY $30.00
+            .pr-right
+              .item_add
+                span.item_price
+                  a(href='#') Pick
+            .clearfix
+          .pre-top
+            .pr-left
+              .item_add
+                span.item_price
+                  h6 ONLY $30.00
+            .pr-right
+              .item_add
+                span.item_price
+                  a(href='#') Pick
+            .clearfix
+          .pre-top
+            .pr-left
+              .item_add
+                span.item_price
+                  h6 ONLY $30.00
+            .pr-right
+              .item_add
+                span.item_price
+                  a(href='#') Pick
+            .clearfix
+          .pre-top
+            .pr-left
+              .item_add
+                span.item_price
+                  h6 ONLY $30.00
+            .pr-right
+              .item_add
+                span.item_price
+                  a(href='#') Pick
+            .clearfix
+      .clearfix
+    .order-top
+      li.item-lists
+        h4 Hot Dogs
+        p Mixed Vegetable With Cheese
+        p Grilled Paneer &amp; Vegetable
+        p Chicken Sausage With Mustard
+      li.item-lists
+        .special-info.grid_1.simpleCart_shelfItem
+          h4 Price
+          .pre-top
+            .pr-left
+              .item_add
+                span.item_price
+                  h6 ONLY $30.00
+            .pr-right
+              .item_add
+                span.item_price
+                  a(href='#') Pick
+            .clearfix
+          .pre-top
+            .pr-left
+              .item_add
+                span.item_price
+                  h6 ONLY $30.00
+            .pr-right
+              .item_add
+                span.item_price
+                  a(href='#') Pick
+            .clearfix
+          .pre-top
+            .pr-left
+              .item_add
+                span.item_price
+                  h6 ONLY $30.00
+            .pr-right
+              .item_add
+                span.item_price
+                  a(href='#') Pick
+            .clearfix
+      .clearfix
+    .order-top
+      li.item-lists
+        h4 Desserts
+        p (Black Forest/Truffle/Noughat)
+        p Apple Pie With Ice Cream
+      li.item-lists
+        .special-info.grid_1.simpleCart_shelfItem
+          h4 Price
+          .pre-top
+            .pr-left
+              .item_add
+                span.item_price
+                  h6 ONLY $30.00
+            .pr-right
+              .item_add
+                span.item_price
+                  a(href='#') Pick
+            .clearfix
+          .pre-top
+            .pr-left
+              .item_add
+                span.item_price
+                  h6 ONLY $30.00
+            .pr-right
+              .item_add
+                span.item_price
+                  a(href='#') Pick
+            .clearfix
+      .clearfix
+    .order-top
+      li.item-lists
+        h4 Cold Beverages
+        p Strawberry Milk Shake
+        p Chocolate Milk Shake
+      li.item-lists
+        .special-info.grid_1.simpleCart_shelfItem
+          h4 Price
+          .pre-top
+            .pr-left
+              .item_add
+                span.item_price
+                  h6 ONLY $30.00
+            .pr-right
+              .item_add
+                span.item_price
+                  a(href='#') Pick
+            .clearfix
+          .pre-top
+            .pr-left
+              .item_add
+                span.item_price
+                  h6 ONLY $30.00
+            .pr-right
+              .item_add
+                span.item_price
+                  a(href='#') Pick
+            .clearfix
+      .clearfix
+    .order-top
+      li.item-lists
+        h4 Sandwiches
+        p (Mint With Cheese Tomato)
+        p (Fresh Tomatoes, Cucumber)
+      li.item-lists
+        .special-info.grid_1.simpleCart_shelfItem
+          h4 Price
+          .pre-top
+            .pr-left
+              .item_add
+                span.item_price
+                  h6 ONLY $30.00
+            .pr-right
+              .item_add
+                span.item_price
+                  a(href='#') pick
+            .clearfix
+          .pre-top
+            .pr-left
+              .item_add
+                span.item_price
+                  h6 ONLY $30.00
+            .pr-right
+              .item_add
+                span.item_price
+                  a(href='#') pick
+            .clearfix
+      .clearfix
+    .order-top
+      li.item-lists
+        h4 Exotic Cakes
+        p Pineapple Flavoured Cream)
+        p A Chocolate Sponge Base
+      li.item-lists
+        .special-info.grid_1.simpleCart_shelfItem
+          h4 Price
+          .pre-top
+            .pr-left
+              .item_add
+                span.item_price
+                  h6 ONLY $30.00
+            .pr-right
+              .item_add
+                span.item_price
+                  a(href='#') pick
+            .clearfix
+          .pre-top
+            .pr-left
+              .item_add
+                span.item_price
+                  h6 ONLY $30.00
+            .pr-right
+              .item_add
+                span.item_price
+                  a(href='#') pick
+            .clearfix
+      .clearfix
+    br
+    .order-top
+      li.item-lists
+        h4 Ice Creams
+        p Butter Scotch
+        p Pineapple
+        p Black Forest
+        p Chocolate with Orange
+      li.item-lists
+        .special-info.grid_1.simpleCart_shelfItem
+          h4 Price
+          .pre-top
+            .pr-left
+              .item_add
+                span.item_price
+                  h6 ONLY $30.00
+            .pr-right
+              .item_add
+                span.item_price
+                  a(href='#') pick
+            .clearfix
+          .pre-top
+            .pr-left
+              .item_add
+                span.item_price
+                  h6 ONLY $30.00
+            .pr-right
+              .item_add
+                span.item_price
+                  a(href='#') pick
+            .clearfix
+          .pre-top
+            .pr-left
+              .item_add
+                span.item_price
+                  h6 ONLY $30.00
+            .pr-right
+              .item_add
+                span.item_price
+                  a(href='#') pick
+            .clearfix
+          .pre-top
+            .pr-left
+              .item_add
+                span.item_price
+                  h6 ONLY $30.00
+            .pr-right
+              .item_add
+                span.item_price
+                  a(href='#') pick
+            .clearfix
+      .clearfix
+// content-section-ends
+// footer-section-starts
+.footer
+  .container
+    p.wow.fadeInLeft(data-wow-delay='0.4s') &copy; FOODSETGO
+// footer-section-ends
+script(type='text/javascript').
+  $(document).ready(function() {
+  /*
+  var defaults = {
+  containerID: 'toTop', // fading element id
+  containerHoverID: 'toTopHover', // fading element hover id
+  scrollSpeed: 1200,
+  easingType: 'linear'
+  };
+  */
+  $().UItoTop({ easingType: 'easeOutQuart' });
+  });
+a#toTop(href='#', style='display: block;')
+  span#toTopHover(style='opacity: 1;')  
