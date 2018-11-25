@@ -38,57 +38,39 @@ head
       .top-menu
         ul
           li
-            a(href='index') Home
+            a(href='/') Home
           |               |
           li
-            a(href='contact') contact
+            a(href='/#mu-contact') contact
           .clearfix
-      .login-section
-        ul
-          li
-            a(href='login.pug') Login
-          |               |
-          li
-            a(href='register.pug') Register
-          |               |
-          .clearfix
-      .clearfix
 // header-section-ends
 // content-section-starts
 .Popular-Restaurants-content
   .Popular-Restaurants-grids
     .container
+    -var index=0;
+    each entry in rests
       .Popular-Restaurants-grid.wow.fadeInRight(data-wow-delay='0.4s')
+     
         .col-md-3.restaurent-logo
-          img.img-responsive(src='./images/restaurent-logo1.jpg', alt='')
+          img.img-responsive(src=entry.image, alt='')
         .col-md-2.restaurent-title
           .logo-title
+          
             h4
-              a(href='restinfo.html') pizza hut
+              //-a(href='/rest/:restid')= entry.name
+              a(href='/rest/' +  entry._id)= entry.name
+               
+         
           .rating
             span ratings
             a(href='#')
-              img.img-responsive(src='images/star1.png', alt='')
+              img.img-responsive(src='images/star1.jpeg', alt='')
         .col-md-7.buy
           a.morebtn.hvr-rectangle-in(href='/menu') buy
         .clearfix
-      .Popular-Restaurants-grid.wow.fadeInLeft(data-wow-delay='0.4s')
-        .col-md-3.restaurent-logo
-          img.img-responsive(src='images/restaurent-logo2.jpg', alt='')
-        .col-md-2.restaurent-title
-          .logo-title.logo-title-
-          each rest1 in rest
-            h4
-              //- a(href='restinfo') Subway
-              a(href="/rest/"+ #{rest1._id} )=#{rest1.name}
-          .rating
-            span ratings
-            a(href='#')
-              img.img-responsive(src='images/star2.png', alt='')
-              | (005)
-        .col-md-7.buy
-          a.morebtn.hvr-rectangle-in(href='orders-list.html') buy
-        .clearfix
+    -index++;
+      
       .footer
         .container
           p.wow.fadeInLeft(data-wow-delay='0.4s') &copy; FOODSETGO

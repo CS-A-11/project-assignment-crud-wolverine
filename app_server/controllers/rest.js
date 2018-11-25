@@ -9,11 +9,29 @@ var sendJSONresponse = function(res, status, content) {
 
  module.exports.home=function(req,res)
 {
-    var rest1 = rest.find();
+    //var rest1 = rest.find();
     //res.json(rest1);
-    res.render("restlist",{rest:rest1});
+    res.render("restlist",{
+      rests:[
+        {
+          name: "PizzaHut",
+          address: "Milad Street",
+          rating: 2,
+          facilities: ["Hot drinks", "Food", "Premium wifi"],
+          image: "/images/pizzahut.jpeg"
+        },
+        {
+          name: "Subway",
+          address: "Food Street",
+          rating: 2,
+          facilities: ["Hot drinks", "Food", "Premium wifi"],
+          image: "/images/subway.jpeg"
+        }
+      ]
+    });
 } 
 module.exports.restListByDistance = function(req, res) {
+    res.render("restlist");
     rest.find().exec(function(err, locations) {
       if (locations.length == 0) {
         // sendJSONresponse(res, 404, {
@@ -23,7 +41,7 @@ module.exports.restListByDistance = function(req, res) {
         rest.create(
           [
             {
-              name: "FAST",
+              name: "Pizza HuT",
               address: "Milad Street",
               rating: 2,
               facilities: ["Hot drinks", "Food", "Premium wifi"]
@@ -77,4 +95,27 @@ module.exports.restReadOne = function(req, res) {
         message: "No restid in request"
       });
     }
+  };
+
+  module.exports.restInfo=function(req,res)
+  {
+    res.render("restinfo",{
+      rests:[
+        {
+          name: "PizzaHut",
+          address: "Milad Street",
+          rating: 2,
+          facilities: ["Hot drinks", "Food", "Premium wifi"],
+          image: "/images/pizzahut.jpeg"
+        },
+        {
+          name: "Subway",
+          address: "Food Street",
+          rating: 2,
+          facilities: ["Hot drinks", "Food", "Premium wifi"],
+          image: "/images/subway.jpeg"
+        }
+      ]
+    });
+
   };

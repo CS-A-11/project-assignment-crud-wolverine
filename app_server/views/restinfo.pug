@@ -1,0 +1,44 @@
+
+block content
+  -var index=0;
+  each entry in rests
+    h1=entry.name
+    .row
+      .col-xs-12.col-sm-6
+        p=entry.address
+        .panel.panel-primary
+          .panel-heading
+            h2.panel-title Facilities
+          .panel-body
+            each facility in rests
+              span.label.label-warning
+                span.glyphicon.glyphicon-ok
+                  p
+                  | &nbsp;#{facility.facilities}
+  
+      .row
+        .col-xs-12
+          .panel.panel-primary.review-panel
+            .panel-heading
+              a.btn.btn-default.pull-right(href="/rest/"+entry._id+"/reviews") Add review
+              h2.panel-title Customer reviews
+            .panel-body.review-container
+              each review in rests
+                .row
+                  .review
+                    .well.well-sm.review-header
+                      span.reviewAuthor #{review.author}
+                      div
+                        - console.log(review.userId)
+                        - console.log(user)
+                      div
+                      if review.userId == user && review.userId != undefined
+                        a.btn(href="/rest/"+entry._id+"/review/"+review._id+"/edit") Edit
+                        a.btn(href="/rest/"+entry._id+"/review/"+review._id+"/delete") Delete
+                      small.reviewTimestamp #{review.timestamp}
+                    .col-xs-12
+                      //-p !{(review.reviewText).replace(/\n/g, '<br/>')}
+    .col-xs-12.col-md-3
+      
+  -index++;
+      //- p= sidebar.callToAction

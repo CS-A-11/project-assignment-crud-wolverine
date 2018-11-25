@@ -1,0 +1,268 @@
+doctype html
+head
+  title Food_Template Bootstrap Responsive Website Template | Checkout :: w3layouts
+  link(rel='stylesheet', href='/stylesheets/bootstraporder.css')
+  // jQuery (necessary for Bootstrap's JavaScript plugins)
+  script(src='/javascripts/js/jquery.min1.js')
+  // Custom Theme files
+  link(rel='stylesheet', href='/stylesheets/styleorder.css')
+  // Custom Theme files
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  script(type='application/x-javascript').
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+  // webfont
+  link(href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic', rel='stylesheet', type='text/css')
+  link(href='//fonts.googleapis.com/css?family=Lobster+Two:400,400italic,700,700italic', rel='stylesheet', type='text/css')
+  // Animation
+  script(src='/javascripts/js/wow.min.js')
+  link(rel='stylesheet', href='/stylesheets/animateorder.css')
+  script.
+    new WOW().init();
+  script(type='text/javascript', src='js/move-top.js')
+  script(type='text/javascript', src='js/easing.js')
+  script(type='text/javascript').
+    jQuery(document).ready(function($) {
+    $(".scroll").click(function(event){
+    event.preventDefault();
+    $('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+    });
+    });
+  script(src='js/simpleCart.min.js')
+// header-section-starts
+.header
+  .container
+    .top-header
+      .logo
+        a(href='index.html')
+          img.img-responsive(src='images/logo.png', alt='')
+      .queries
+        p
+          | Questions? Call us Toll-free!
+          span 1800-0000-7777 
+          label (11AM to 11PM)
+      .header-right
+        .cart.box_1
+          a(href='checkout')
+            h3
+              span.simpleCart_total  $0.00 
+              |  (
+              span#simpleCart_quantity.simpleCart_quantity  0 
+              |  items)
+              img(src='images/bag.png', alt='')
+          p
+            a.simpleCart_empty(href='javascript:;') Empty card
+          .clearfix  
+      .clearfix
+  .menu-bar
+    .container
+      .top-menu
+        ul
+          li
+            a(href='index.html') Home
+          |               |
+          li.active
+            a(href='restaurants.html') Popular Restaurants
+          |               |
+          li
+            a(href='order.html') Order
+          |               |
+          li
+            a(href='contact.html') contact
+          .clearfix
+      .login-section
+        ul
+          li
+            a(href='login.html') Login
+          |               |
+          li
+            a(href='register.html') Register
+          |               |
+          li
+            a(href='#') Help
+          .clearfix
+      .clearfix
+// header-section-ends
+// content-section-starts
+// checkout
+.cart-items
+  .container
+    h1 My Shopping Bag (3)
+    script.
+      $(document).ready(function(c) {
+      $('.close1').on('click', function(c){
+      $('.cart-header').fadeOut('slow', function(c){
+      $('.cart-header').remove();
+      });
+      });
+      });
+    .cart-header
+      .close1  
+      .cart-sec.simpleCart_shelfItem
+        .cart-item.cyc
+          img.img-responsive(src='images/cuisine3.jpg', alt='')
+        .cart-item-info
+          h3
+            a(href='#')  Lorem Ipsum is not simply 
+            span Pickup time:
+          ul.qty
+            li
+              p Min. order value:
+            li
+              p FREE delivery
+          .delivery
+            p Service Charges : $10.00
+            span Delivered in 1-1:30 hours
+            .clearfix
+        .clearfix
+    script.
+      $(document).ready(function(c) {
+      $('.close2').on('click', function(c){
+      $('.cart-header2').fadeOut('slow', function(c){
+      $('.cart-header2').remove();
+      });
+      });
+      });
+    .cart-header2
+      .close2  
+      .cart-sec.simpleCart_shelfItem
+        .cart-item.cyc
+          img.img-responsive(src='images/cuisine2.jpg', alt='')
+        .cart-item-info
+          h3
+            a(href='#')  Lorem Ipsum is not simply 
+            span Pickup time:
+          ul.qty
+            li
+              p Min. order value:
+            li
+              p FREE delivery
+          .delivery
+            p Service Charges : $10.00
+            span Delivered in 1-1:30 hours
+            .clearfix
+        .clearfix
+    script.
+      $(document).ready(function(c) {
+      $('.close3').on('click', function(c){
+      $('.cart-header3').fadeOut('slow', function(c){
+      $('.cart-header3').remove();
+      });
+      });
+      });
+    .cart-header3
+      .close3  
+      .cart-sec.simpleCart_shelfItem
+        .cart-item.cyc
+          img.img-responsive(src='images/cuisine1.jpg', alt='')
+        .cart-item-info
+          h3
+            a(href='#')  Lorem Ipsum is not simply 
+            span Pickup time:
+          ul.qty
+            li
+              p Min. order value:
+            li
+              p FREE delivery
+          .delivery
+            p Service Charges : $10.00
+            span Delivered in 1-1:30 hours
+            .clearfix
+        .clearfix
+// checkout
+#contact.contact-section
+  .container
+    .contact-section-grids
+      .col-md-3.contact-section-grid.wow.fadeInLeft(data-wow-delay='0.4s')
+        h4 Site Links
+        ul
+          li
+            i.point
+          li.data
+            a(href='#') About Us
+        ul
+          li
+            i.point
+          li.data
+            a(href='#') Contact Us
+        ul
+          li
+            i.point
+          li.data
+            a(href='#') Privacy Policy
+        ul
+          li
+            i.point
+          li.data
+            a(href='#') Terms of Use
+      .col-md-3.contact-section-grid.wow.fadeInLeft(data-wow-delay='0.4s')
+        h4 Site Links
+        ul
+          li
+            i.point
+          li.data
+            a(href='#') About Us
+        ul
+          li
+            i.point
+          li.data
+            a(href='#') Contact Us
+        ul
+          li
+            i.point
+          li.data
+            a(href='#') Privacy Policy
+        ul
+          li
+            i.point
+          li.data
+            a(href='#') Terms of Use
+      .col-md-3.contact-section-grid.wow.fadeInRight(data-wow-delay='0.4s')
+        h4 Follow Us On...
+        ul
+          li
+            i.fb
+          li.data
+            a(href='#')   Facebook
+        ul
+          li
+            i.tw
+          li.data
+            a(href='#') Twitter
+        ul
+          li
+            i.in
+          li.data
+            a(href='#')  Linkedin
+        ul
+          li
+            i.gp
+          li.data
+            a(href='#') Google Plus
+      .col-md-3.contact-section-grid.nth-grid.wow.fadeInRight(data-wow-delay='0.4s')
+        h4 Subscribe Newsletter
+        p To get latest updates and food deals every week
+        input.text(type='text', value='', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = '';}")
+        input(type='submit', value='submit')
+      .clearfix
+// content-section-ends
+// footer-section-starts
+.footer
+  .container
+    p.wow.fadeInLeft(data-wow-delay='0.4s')
+      | &copy; 2014  All rights  Reserved | Template by &nbsp;
+      a(href='http://w3layouts.com', target='target_blank') W3Layouts
+// footer-section-ends
+script(type='text/javascript').
+  $(document).ready(function() {
+  /*
+  var defaults = {
+  containerID: 'toTop', // fading element id
+  containerHoverID: 'toTopHover', // fading element hover id
+  scrollSpeed: 1200,
+  easingType: 'linear'
+  };
+  */
+  $().UItoTop({ easingType: 'easeOutQuart' });
+  });
+a#toTop(href='#', style='display: block;')
+  span#toTopHover(style='opacity: 1;')  

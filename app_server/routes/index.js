@@ -34,26 +34,28 @@ router.post("/orders", ctrlorders.orderSchema);
 
 
 router.get("/feedback/add", ctrlfeedback.feedRead);
-router.post("/rest/:restid/reviews", ctrlfeedback.reviewsCreate);
-router.get(
-  "/rest/:restid/reviews/:reviewid",
-  ctrlfeedback.reviewsReadOne
-);
-router.put(
-  "/rest/:restid/reviews/:reviewid",
-  ctrlfeedback.reviewsUpdateOne
-);
-router.delete(
-  "/rest/:restid/reviews/:reviewid",
-  ctrlfeedback.reviewsDeleteOne
-);
+router.post("/feedback/add",ctrlfeedback.feedCreate);
+// router.post("/rest/:restid/reviews", ctrlfeedback.reviewsCreate);
+// router.get(
+//   "/rest/:restid/reviews/:reviewid",
+//   ctrlfeedback.reviewsReadOne
+// );
+// router.put(
+//   "/rest/:restid/reviews/:reviewid",
+//   ctrlfeedback.reviewsUpdateOne
+// );
+// router.delete(
+//   "/rest/:restid/reviews/:reviewid",
+//   ctrlfeedback.reviewsDeleteOne
+// );
 //router.post("/feedback/add",ctrlfeedback.feedCreate);
 //router.get("/feedback/:feedbackid",ctrlfeedback.feedReadrev);
 
 router.get("/rest",ctrlrest.home);
 router.get("/rest", ctrlrest.restListByDistance);
 //router.post("/rest", ctrlrest.restCreate);
-router.get("/rest/:restid", ctrlrest.restReadOne);
+//router.get("/rest/:restid", ctrlrest.restReadOne);
+router.get("/rest/:restid",ctrlrest.restInfo);
 
 router.get("/menu",ctrlmenu.home);
 
