@@ -3,7 +3,11 @@ head
   title Food_Template Bootstrap Responsive Website Template | Checkout :: w3layouts
   link(rel='stylesheet', href='/stylesheets/bootstraporder.css')
   // jQuery (necessary for Bootstrap's JavaScript plugins)
+<<<<<<< HEAD
+  script(src='/javascripts/jquery.min1.js')
+=======
   script(src='/javascripts/js/jquery.min1.js')
+>>>>>>> 018408f96efa061166d3d05643f1c0eb9a6425de
   // Custom Theme files
   link(rel='stylesheet', href='/stylesheets/styleorder.css')
   // Custom Theme files
@@ -14,12 +18,21 @@ head
   link(href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic', rel='stylesheet', type='text/css')
   link(href='//fonts.googleapis.com/css?family=Lobster+Two:400,400italic,700,700italic', rel='stylesheet', type='text/css')
   // Animation
+<<<<<<< HEAD
+  script(src='/javascripts/wow.min.js')
+  link(rel='stylesheet', href='/stylesheets/animateorder.css')
+  script.
+    new WOW().init();
+  script(type='text/javascript', src='/javascripts/move-top.js')
+  script(type='text/javascript', src='/javascripts/easing.js')
+=======
   script(src='/javascripts/js/wow.min.js')
   link(rel='stylesheet', href='/stylesheets/animateorder.css')
   script.
     new WOW().init();
   script(type='text/javascript', src='js/move-top.js')
   script(type='text/javascript', src='js/easing.js')
+>>>>>>> 018408f96efa061166d3d05643f1c0eb9a6425de
   script(type='text/javascript').
     jQuery(document).ready(function($) {
     $(".scroll").click(function(event){
@@ -27,6 +40,54 @@ head
     $('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
     });
     });
+<<<<<<< HEAD
+  script(src='/javascripts/simpleCart.min.js')
+// header-section-starts
+header#mu-header
+  nav.navbar.navbar-default.mu-main-navbar(role='navigation')
+    .container
+      .navbar-header
+        // FOR MOBILE VIEW COLLAPSED BUTTON
+        button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        // LOGO
+        // Text based logo
+        a#size.navbar-brand(href='index.html')
+          img(src='/images/logo1.png')
+        a.navbar-brand(href='#home')
+          | FoodSet
+          span Go
+        // Image based logo
+        // <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Logo img"></a>
+      #navbar.navbar-collapse.collapse
+        if user
+          ul#top-menu.nav.navbar-nav.navbar-right.mu-main-nav
+
+            li
+              a(href='orders') ORDERS
+
+            li
+              a(href='/rest') RESTAURANT
+
+            li
+              a(href='feedback/add') FEEDBACK
+
+            li
+              a(href='/logout') LOGOUT
+            li 
+              .header-right
+                .cart.box_1
+                  h3
+                    span.simpleCart_total  $0.00 
+                    |  (
+                    span#simpleCart_quantity.simpleCart_quantity  0 
+                    |  items)
+                    img(src='/images/bag.png', alt='')
+            .clearfix
+=======
   script(src='js/simpleCart.min.js')
 // header-section-starts
 .header
@@ -81,6 +142,7 @@ head
             a(href='#') Help
           .clearfix
       .clearfix
+>>>>>>> 018408f96efa061166d3d05643f1c0eb9a6425de
 // header-section-ends
 // content-section-starts
 // checkout
@@ -99,10 +161,17 @@ head
       .close1  
       .cart-sec.simpleCart_shelfItem
         .cart-item.cyc
+<<<<<<< HEAD
+          img.img-responsive(src='/images/gallery/2.jpg', alt='')
+        .cart-item-info
+          h3
+            a(href='#') Burger
+=======
           img.img-responsive(src='images/cuisine3.jpg', alt='')
         .cart-item-info
           h3
             a(href='#')  Lorem Ipsum is not simply 
+>>>>>>> 018408f96efa061166d3d05643f1c0eb9a6425de
             span Pickup time:
           ul.qty
             li
@@ -126,7 +195,11 @@ head
       .close2  
       .cart-sec.simpleCart_shelfItem
         .cart-item.cyc
+<<<<<<< HEAD
+          img.img-responsive(src='/images/gallery/1.jpg', alt='')
+=======
           img.img-responsive(src='images/cuisine2.jpg', alt='')
+>>>>>>> 018408f96efa061166d3d05643f1c0eb9a6425de
         .cart-item-info
           h3
             a(href='#')  Lorem Ipsum is not simply 
@@ -153,7 +226,11 @@ head
       .close3  
       .cart-sec.simpleCart_shelfItem
         .cart-item.cyc
+<<<<<<< HEAD
+          img.img-responsive(src='/images/gallery/4.jpg', alt='')
+=======
           img.img-responsive(src='images/cuisine1.jpg', alt='')
+>>>>>>> 018408f96efa061166d3d05643f1c0eb9a6425de
         .cart-item-info
           h3
             a(href='#')  Lorem Ipsum is not simply 

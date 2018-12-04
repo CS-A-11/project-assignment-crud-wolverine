@@ -1,0 +1,79 @@
+doctype html
+head
+  title Food_Template Bootstrap Responsive Website Template | Checkout :: w3layouts
+  link(rel='stylesheet', href='/stylesheets/bootstraporder.css')
+  // jQuery (necessary for Bootstrap's JavaScript plugins)
+  script(src='/javascripts/jquery.min1.js')
+  // Custom Theme files
+  link(rel='stylesheet', href='/stylesheets/styleordercheck.css')
+  // Custom Theme files
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  script(type='application/x-javascript').
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+  // webfont
+  link(href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic', rel='stylesheet', type='text/css')
+  link(href='//fonts.googleapis.com/css?family=Lobster+Two:400,400italic,700,700italic', rel='stylesheet', type='text/css')
+  // Animation
+  script(src='/javascripts/wow.min.js')
+  link(rel='stylesheet', href='/stylesheets/animateorder.css')
+
+header#mu-header
+  nav.navbar.navbar-default.mu-main-navbar(role='navigation')
+    .container
+      .navbar-header
+        // FOR MOBILE VIEW COLLAPSED BUTTON
+        button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        // LOGO
+        // Text based logo
+        a#size.navbar-brand(href='index.html')
+          img(src='/images/logo1.png')
+        a.navbar-brand(href='#home')
+          | FoodSet
+          span Go
+        // Image based logo
+        // <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Logo img"></a>
+      #navbar.navbar-collapse.collapse
+        if user
+          ul#top-menu.nav.navbar-nav.navbar-right.mu-main-nav
+
+            li
+              a(href='orders') ORDERS
+
+            li
+              a(href='/rest') RESTAURANT
+
+            li
+              a(href='feedback/add') FEEDBACK
+
+            li
+              a(href='/logout') LOGOUT
+
+block content
+-var index=0;
+each entry in reviews1
+  .cart-items
+    .cart-header3
+      .close3  
+      .cart-sec.simpleCart_shelfItem
+        .cart-item.cyc
+          img.img-responsive(src='/images/gallery/1.jpg', alt='')
+        .cart-item-info
+            
+          h1=entry.uname
+            
+          h4=entry.email
+        
+          h4=entry.restName
+        
+          h4=entry.comments
+        
+          h4=entry.ratings
+            .clearfix
+        .clearfix
+-index++;       
+  
+        

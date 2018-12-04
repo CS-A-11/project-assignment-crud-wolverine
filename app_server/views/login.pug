@@ -1,12 +1,53 @@
-
 doctype html
 html
   head
-     meta(name='viewport', content='width=device-width, initial-scale=1')
-     link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet")
-     link(rel='stylesheet', href='/stylesheets/login.css')
- 
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet")
+    link(rel='stylesheet', href='/stylesheets/login.css')
+    script(src='/javascripts/lib.js')
   
+<<<<<<< HEAD
+    script(type='text/javascript').
+      function login(form) {
+      var un = form.email.value;
+      var pw= form.password.value;
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.open("post", "Submit", true);
+      xmlhttp.onreadystatechange = function() {
+      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+      loginResults();
+      }
+      }
+      xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8");
+      xmlhttp.send("email=" + un + "&password=" + pw);
+      function loginResults(xml) {
+      var loggedIn = document.getElementById("LoggedIn");
+      var badLogin = document.getElementById("BadLogin");
+      $(#BadLogin).show("erveurnhovnerionvioeriooierrioeno");
+      
+      if (xmlhttp.responseText.indexOf("failed") == -1) {
+      loggedIn.innerHTML = "Logged in as " + xmlhttp.responseText;
+      loggedIn.style.display = "block";
+      form.style.display = "none";
+      } else { 
+      $(#BadLogin).show("erveurnhovnerionvioeriooierrioeno");
+      badLogin.style.display = "block";
+      form.email.select();
+      form.email.className = "Highlighted";
+      
+      setTimeout(function() {
+      badLogin.style.display = 'none';
+      }, 3000);
+      }
+      }
+      }
+      observeEvent(window, "load", function() {
+      var loginForm = document.getElementById("myform");
+      observeEvent(loginForm, "submit", function() {
+      login(loginForm);
+      });
+      });
+=======
   script.
     function validation() {
     var x = document.myform.email.value;
@@ -26,6 +67,7 @@ html
     return false;
     }
     }
+>>>>>>> 018408f96efa061166d3d05643f1c0eb9a6425de
   title FoodSetGo
   // for-mobile-apps
   meta(name='viewport' content='width=device-width, initial-scale=1')
@@ -36,8 +78,6 @@ html
   // //for-mobile-apps
   // //custom-theme
   link(href='StyleSheet1.css' rel='stylesheet' type='text/css' media='all')
-  // js
-  // <script type="text/javascript" src="JavaScript1.js"></script>
   link(href='//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css')
 // banner
 .pic
@@ -45,8 +85,7 @@ html
     .main
       h1.head Log In
       .main_grid
-        // <form name ="myform" action="#"  onsubmit="return validateForm()" method="post" class="form_post">
-        form(name='myform' method='post' action='/login' onsubmit='return validation();')
+        form#myform(method='post' action='/login' onsubmit='return validationForm()')
           .agileits_main_grid.l_main_grid
             span.agileits_grid
               label Your Email 
@@ -56,8 +95,13 @@ html
               label Your Password 
               input#psw(type='password' name='password' placeholder='Your Password' required='')
           .clear
-          // </div>
+          // </div> 
           .main_grid2
             .main_grid2_right
               input(type='submit' value='Submit')
-  // //footer
+          #BadLogin
+            p
+              | The login information you entered does not match
+              | an account in our records. Please try again.
+        h1#LoggedIn
+  //footer

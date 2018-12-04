@@ -3,7 +3,11 @@ head
   title MENU
   link(rel='stylesheet', href='/stylesheets/bootstraporder.css')
   // jQuery (necessary for Bootstrap's JavaScript plugins)
+<<<<<<< HEAD
+  script(src='/javascripts/jquery.min1.js')
+=======
   script(src='/javascripts/js/jquery.min1.js')
+>>>>>>> 018408f96efa061166d3d05643f1c0eb9a6425de
   // Custom Theme files
   link(rel='stylesheet', href='/stylesheets/styleorder.css')
   // Custom Theme files
@@ -14,6 +18,19 @@ head
   link(href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic', rel='stylesheet', type='text/css')
   link(href='//fonts.googleapis.com/css?family=Lobster+Two:400,400italic,700,700italic', rel='stylesheet', type='text/css')
   // Animation
+<<<<<<< HEAD
+  script(type='text/javascript', src='/javascripts/wow.min.js')
+  link(rel='stylesheet', href='/stylesheets/animateorder.css')
+  script
+    new WOW().init();
+  script(type='text/javascript', src='/javascripts/move-top.js')
+  script(type='text/javascript', src='/javascripts/easing.js')
+  script(type='text/javascript').
+    jQuery(document).ready(function(Rs) {
+    $(".scroll").click(function(event){
+    event.preventDefault();
+    $('html,body').animate({scrollTop:Rs(this.hash).offset().top},1200);
+=======
   script(src='/javascripts/js/wow.min.js')
   link(rel='stylesheet', href='/stylesheets/animateorder.css')
   script.
@@ -25,10 +42,60 @@ head
     Rs(".scroll").click(function(event){
     event.preventDefault();
     Rs('html,body').animate({scrollTop:Rs(this.hash).offset().top},1200);
+>>>>>>> 018408f96efa061166d3d05643f1c0eb9a6425de
     });
     });
   script(src='/javascripts/simpleCart.min.js')
 // header-section-starts
+<<<<<<< HEAD
+header#mu-header
+  nav.navbar.navbar-default.mu-main-navbar(role='navigation')
+    .container
+      .navbar-header
+        // FOR MOBILE VIEW COLLAPSED BUTTON
+        button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        // LOGO
+        // Text based logo
+        a#size.navbar-brand(href='index.html')
+          img(src='/images/logo1.png')
+        a.navbar-brand(href='#home')
+          | FoodSet
+          span Go
+        // Image based logo
+        // <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Logo img"></a>
+      #navbar.navbar-collapse.collapse
+        if user
+          ul#top-menu.nav.navbar-nav.navbar-right.mu-main-nav
+
+            li
+              a(href='orders') ORDERS
+
+            li
+              a(href='/rest') RESTAURANT
+
+            li
+              a(href='feedback/add') FEEDBACK
+
+            li
+              a(href='/logout') LOGOUT
+            li  
+              .cart.box_1
+                a(href='/menu/order') Order Placed
+                  h3
+                    span.simpleCart_total  Rs0.00 
+                    |  (
+                    span#simpleCart_quantity.simpleCart_quantity  0 
+                    |  items)
+                    img(src='/images/cart.jpeg', alt='')
+                p
+                  a.simpleCart_empty(href='javascript:;') Empty card
+                .clearfix 
+
+=======
 .header
   .container
     .top-header
@@ -60,6 +127,7 @@ head
           //-.clearfix
           .clearfix
       .clearfix
+>>>>>>> 018408f96efa061166d3d05643f1c0eb9a6425de
 // header-section-ends
 // content-section-starts
 .orders
@@ -381,7 +449,11 @@ head
     p.wow.fadeInLeft(data-wow-delay='0.4s') &copy; FOODSETGO
 // footer-section-ends
 script(type='text/javascript').
+<<<<<<< HEAD
+  $(document).ready(function() {
+=======
   Rs(document).ready(function() {
+>>>>>>> 018408f96efa061166d3d05643f1c0eb9a6425de
   /*
   var defaults = {
   containerID: 'toTop', // fading element id
@@ -390,7 +462,11 @@ script(type='text/javascript').
   easingType: 'linear'
   };
   */
+<<<<<<< HEAD
+  $().UItoTop({ easingType: 'easeOutQuart' });
+=======
   Rs().UItoTop({ easingType: 'easeOutQuart' });
+>>>>>>> 018408f96efa061166d3d05643f1c0eb9a6425de
   });
 a#toTop(href='#', style='display: block;')
   span#toTopHover(style='opacity: 1;')  

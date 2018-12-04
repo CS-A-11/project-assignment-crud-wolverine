@@ -1,11 +1,30 @@
 doctype html
 head
   title FoodSetGo
+<<<<<<< HEAD
+  
+  link(rel='stylesheet', href='/stylesheets/bootstraporder.css')
+  // jQuery (necessary for Bootstrap's JavaScript plugins)
+  script(src='/javascripts/js/jquery.min1.js')
+  // Custom Theme files
+=======
   meta(name='viewport', content='width=device-width, initial-scale=1')
   meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
   //- link(href='StyleSheet1.css', rel='stylesheet', type='text/css', media='all')
+>>>>>>> 018408f96efa061166d3d05643f1c0eb9a6425de
   link(rel='stylesheet', href='/stylesheets/feedback.css')
-  link(href='//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900', rel='stylesheet', type='text/css')
+  // Custom Theme files
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  script(type='application/x-javascript').
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+  // webfont
+  link(href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic', rel='stylesheet', type='text/css')
+  link(href='//fonts.googleapis.com/css?family=Lobster+Two:400,400italic,700,700italic', rel='stylesheet', type='text/css')
+  // Animation
+  script(src='/javascripts/js/wow.min.js')
+  link(rel='stylesheet', href='/stylesheets/animateorder.css')
+ 
+  link(href='//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900', rel='stylesheet', type='text/css')  
   script.
     function validation() {
     var x = document.myform.email.value;
@@ -35,10 +54,10 @@ head
   link(href='https://www.jqueryscript.net/css/jquerysctipttop.css', rel='stylesheet', type='text/css')
   link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
   link(rel='stylesheet', href='css/simple-rating.css')
+ 
   style.
     html { height: 100vh; }
     body { color: orange; font-family: 'Open Sans';}
-    .container { max-width: 640px; margin: 150px auto; }
   script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js', integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN', crossorigin='anonymous')
   script(src='js/simple-rating.js')
   script(type='text/javascript').
@@ -111,6 +130,41 @@ head
     }
     }
     }
+// header-section-starts
+header#mu-header
+  nav.navbar.navbar-default.mu-main-navbar(role='navigation')
+    .container
+      .navbar-header
+        // FOR MOBILE VIEW COLLAPSED BUTTON
+        button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        // LOGO
+        // Text based logo
+        a#size.navbar-brand(href='index.html')
+          img(src='/images/logo1.png')
+        a.navbar-brand(href='#home')
+          | FoodSet
+          span Go
+        // Image based logo
+        // <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Logo img"></a>
+      #navbar.navbar-collapse.collapse
+        if user
+          ul#top-menu.nav.navbar-nav.navbar-right.mu-main-nav
+
+            li
+              a(href='orders') ORDERS
+
+            li
+              a(href='/rest') RESTAURANT
+
+            li
+              a(href='feedback/add') FEEDBACK
+
+            li
+              a(href='/logout') LOGOUT
 // banner
 #pic
   .center-container
@@ -149,4 +203,4 @@ head
           .main_grid2
             .main_grid2_right
               input(type='Submit', value='Submit')
-  // //footer
+

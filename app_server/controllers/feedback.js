@@ -3,6 +3,12 @@ var mongoose = require("mongoose");
 var rev = mongoose.model("Review");
 //var rev=mongoose.model('Review');
 // var rev=require('../models/review');
+
+var sendJSONresponse = function(res, status, content) {
+  res.status(status);
+  res.json(content);
+};
+
 module.exports.feedRead = function(req, res) {
     res.render("feedback", {
       title: "Feedback FoodSetGo!",
@@ -31,6 +37,31 @@ module.exports.feedRead = function(req, res) {
   );
 };
 
+<<<<<<< HEAD
+module.exports.feedReadAll=function(req,res)
+{
+ 
+  rev.find()
+    .exec(function(err, location) {
+      console.log(location);
+      //res.send(location);
+      var response, review;
+      if (!location) {
+        sendJSONresponse(res, 404, {
+          message: "reviews not found"
+        });
+        return;
+      } else if (err) {
+        sendJSONresponse(res, 400, err);
+        return;
+      }
+      res.render("viewreview",{title:'Reviews', reviews1:location});
+  });
+
+};
+
+=======
+>>>>>>> 018408f96efa061166d3d05643f1c0eb9a6425de
 // module.exports.feedReadrev=function(req,res)
 // {
 //   if(req.params && req.params.id)
