@@ -1,16 +1,17 @@
+
 doctype html
 html
   head
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet")
-    link(rel='stylesheet', href='/stylesheets/login.css')
-    script(src='/javascripts/lib.js')
+     meta(name='viewport', content='width=device-width, initial-scale=1')
+     link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet")
+     link(rel='stylesheet', href='/stylesheets/login.css')
+
   
-<<<<<<< HEAD
-    script(type='text/javascript').
+     script(type='text/javascript' src='lib.js')
+     script(type='text/javascript').
       function login(form) {
       var un = form.email.value;
-      var pw= form.password.value;
+      var pw = form.password.value;
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.open("post", "Submit", true);
       xmlhttp.onreadystatechange = function() {
@@ -19,22 +20,18 @@ html
       }
       }
       xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8");
-      xmlhttp.send("email=" + un + "&password=" + pw);
-      function loginResults(xml) {
+      xmlhttp.send("username=" + un + "&password=" + pw);
+      function loginResults() {
       var loggedIn = document.getElementById("LoggedIn");
       var badLogin = document.getElementById("BadLogin");
-      $(#BadLogin).show("erveurnhovnerionvioeriooierrioeno");
-      
       if (xmlhttp.responseText.indexOf("failed") == -1) {
       loggedIn.innerHTML = "Logged in as " + xmlhttp.responseText;
       loggedIn.style.display = "block";
       form.style.display = "none";
-      } else { 
-      $(#BadLogin).show("erveurnhovnerionvioeriooierrioeno");
+      } else {
       badLogin.style.display = "block";
       form.email.select();
       form.email.className = "Highlighted";
-      
       setTimeout(function() {
       badLogin.style.display = 'none';
       }, 3000);
@@ -47,45 +44,30 @@ html
       login(loginForm);
       });
       });
-=======
-  script.
-    function validation() {
-    var x = document.myform.email.value;
-    var atposition = x.indexOf("@");
-    var dotposition = x.lastIndexOf(".");
-    if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= x.length) {
-    alert("Please enter a valid e-mail address \\n atpostion:" + atposition + "\n dotposition:" + dotposition);
-    return false;
-    }
-    var password = document.myform.password.value;
-    if (password == null || password == "") {
-    alert("password can't be blank");
-    return false;
-    }
-    else if (password.length < 8) {
-    alert("Password must be at least 8 characters long.");
-    return false;
-    }
-    }
->>>>>>> 018408f96efa061166d3d05643f1c0eb9a6425de
-  title FoodSetGo
+title FoodSetGo
   // for-mobile-apps
-  meta(name='viewport' content='width=device-width, initial-scale=1')
-  meta(http-equiv='Content-Type' content='text/html; charset=utf-8')
-  script(type='application/x-javascript').
-    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-    function hideURLbar(){ window.scrollTo(0,1); }
-  // //for-mobile-apps
-  // //custom-theme
-  link(href='StyleSheet1.css' rel='stylesheet' type='text/css' media='all')
-  link(href='//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css')
+meta(name='viewport' content='width=device-width, initial-scale=1')
+meta(http-equiv='Content-Type' content='text/html; charset=utf-8')
+script(type='application/x-javascript').
+  addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+  function hideURLbar(){ window.scrollTo(0,1); }
+
+script.
+  function myFunction() {
+  alert("You have logged in");
+ }
+  //-link(href='StyleSheet1.css' rel='stylesheet' type='text/css' media='all')
+  // js
+  // <script type="text/javascript" src="JavaScript1.js"></script>
+link(href='//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css')
 // banner
 .pic
   .center-container
     .main
       h1.head Log In
       .main_grid
-        form#myform(method='post' action='/login' onsubmit='return validationForm()')
+        // <form name ="myform" action="#"  onsubmit="return validateForm()" method="post" class="form_post">
+        form#myform(method='post' action='/login' onsubmit='return validation();')
           .agileits_main_grid.l_main_grid
             span.agileits_grid
               label Your Email 
@@ -95,13 +77,15 @@ html
               label Your Password 
               input#psw(type='password' name='password' placeholder='Your Password' required='')
           .clear
-          // </div> 
+          // </div>
           .main_grid2
             .main_grid2_right
-              input(type='submit' value='Submit')
-          #BadLogin
-            p
-              | The login information you entered does not match
-              | an account in our records. Please try again.
+              //-input(type='submit'name ='submit' value='Submit')
+              button(onclick='myFunction()') LogIn
+            #BadLogin
+              p
+                | The login information you entered does not match
+                | an account in our records. Please try again.
         h1#LoggedIn
-  //footer
+  // //footer
+

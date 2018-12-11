@@ -670,8 +670,6 @@ a.simpleCart_empty {
 /*-- orders-list --*/
 .orders {
 	padding: 6em 0;
-	color:rgb(231, 180, 12);
-	margin-left:13px;
 }
 .order-top h4 {
 	color: rgb(226, 165, 52);
@@ -681,11 +679,10 @@ a.simpleCart_empty {
 }
 .order-top p {
   color: #0f0f0f;
-  font-size: 20px;
+  font-size: 1em;
   font-weight: 400;
   line-height: 1.8em;
-	margin: 1em 0;
-	margin-top:40px; 
+  margin: 1em 0;
 }
 .order-top h6 {
   color: #0a0a0a;
@@ -726,7 +723,7 @@ li.item-lists {
 /*-- orders-list --*/
 /*-- cart-page --*/
 .cart-items {
-	padding: 3em 0;
+	padding: 9.5em 0;
 }
 .cart-items h1 {
   font-size: 1.85em;
@@ -784,7 +781,7 @@ ul.qty li p {
   color: rgb(17, 17, 17);
 }
 .delivery {
-  margin-top: 3em;
+  margin-top: 4em;
 }
 .delivery p {
   color: rgb(19, 18, 18);
@@ -798,10 +795,10 @@ ul.qty li p {
   font-weight: 400;
   float: right;
 }
+/* white space issue */
 .cart-sec {
-	margin-bottom: 3em;
+	margin-bottom: -280px;
 	background-color: rgb(240, 223, 187);
-
 	padding: 20px;
 }
 .cart-header,.cart-header2,.cart-header3 {
@@ -2338,7 +2335,7 @@ address {
 }
 /*-- popular-restaurent--*/
 .Popular-Restaurants-content{
-	padding:5em 0;
+	padding:9em 0;
 }
 .restaurent-title h4{
 	color:#000000;
@@ -3027,7 +3024,6 @@ a.morebtn{
 	.ordering-section-grid {
 		min-height: 170px;
 	}
-
 	.ordering-section-grid-process {
 		top: -12%;
 	}
@@ -5968,3 +5964,17 @@ body {
 	
   }
   
+.panel.panel-primary.review-panel
+{
+    margin-left:27px;
+    width:60%;
+}
+.panel.panel-primary
+{
+    margin-left:15px;
+    width:125%;
+}
+.glyphicon.glyphicon-ok
+{
+    font-size: 20px;
+}

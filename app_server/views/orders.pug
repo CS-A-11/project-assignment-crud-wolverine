@@ -3,9 +3,9 @@ head
   title Order
   link(rel='stylesheet', href='/stylesheets/bootstraporder.css')
   // jQuery (necessary for Bootstrap's JavaScript plugins)
-  script(src='/javascripts/js/jquery.min1.js')
+  script(src='/javascripts/jquery.min1.js')
   // Custom Theme files
-  link(rel='stylesheet', href='/stylesheets/styleorder.css')
+  link(rel='stylesheet', href='/stylesheets/orders.css')
   // Custom Theme files
   meta(name='viewport', content='width=device-width, initial-scale=1')
   script(type='application/x-javascript').
@@ -14,12 +14,12 @@ head
   link(href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic', rel='stylesheet', type='text/css')
   link(href='//fonts.googleapis.com/css?family=Lobster+Two:400,400italic,700,700italic', rel='stylesheet', type='text/css')
   // Animation
-  script(src='/javascripts/js/wow.min.js')
+  script(src='/javascripts/wow.min.js')
   link(rel='stylesheet', href='/stylesheets/animateorder.css')
   script.
     new WOW().init();
-  script(type='text/javascript', src='/javascripts/js/move-top.js')
-  script(type='text/javascript', src='/javascripts/js/easing.js')
+  script(type='text/javascript', src='/javascripts/move-top.js')
+  script(type='text/javascript', src='/javascripts/easing.js')
   script(type='text/javascript').
     jQuery(document).ready(function($) {
     $(".scroll").click(function(event){
@@ -27,8 +27,8 @@ head
     $('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
     });
     });
-  script(src='/javascripts/js/jquery.carouFredSel-6.1.0-packed.js')
-  script(src='/javascripts/js/tms-0.4.1.js')
+  script(src='/javascripts/jquery.carouFredSel-6.1.0-packed.js')
+  script(src='/javascripts/tms-0.4.1.js')
   script.
     $(window).load(function(){
     $('.slider')._TMS({
@@ -60,52 +60,64 @@ head
     mousewheel: false,
     swipe: {onMouse: false, onTouch: false}});
     });
-  script(src='/javascripts/js/jquery.easydropdown.js')
-  script(src='/javascripts/js/simpleCart.min.js')
+  script(src='/javascripts/jquery.easydropdown.js')
+  script(src='/javascripts/simpleCart.min.js')
   script.
     function validation() {
-    var x = document.myform.restlocname.value;
+    var x = document.myform.locname.value;
     if (x.length == "") {
-    alert("Resturant location can't be blank");
+    alert("Address can't be blank");
     return false;
     }
     }
+  script.
+    function myFunction() {
+    alert("Order placed");
+    }  
 // header-section-starts
-.header
-  .container
-    .top-header
-      .logo
-        a(href='index.html')
-          img.img-responsive(src='images/logo.png', alt='')
-      .queries
-      .clearfix
-  .menu-bar
+header#mu-header
+  nav.navbar.navbar-default.mu-main-navbar(role='navigation')
     .container
-      .top-menu
-        ul
-          li
-            a(href='/') Home
-          |               |
-          li.active
-            a(href='/rest') Restaurant
-          |               |
+      .navbar-header
+        // FOR MOBILE VIEW COLLAPSED BUTTON
+        button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        // LOGO
+        // Text based logo
+        a#size.navbar-brand(href='index.html')
+          img(src='/images/logo1.png')
+        a.navbar-brand(href='#home')
+          | FoodSet
+          span Go
+        // Image based logo
+        // <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Logo img"></a>
+      #navbar.navbar-collapse.collapse
+        if user
+          ul#top-menu.nav.navbar-nav.navbar-right.mu-main-nav
 
-          li.active
-            a(href='/menu') Menu
-          |               |
-          //- li
-          //-   a(href='contact.html') contact
-          //- .clearfix
-      //- .login-section
-      //-   ul
-      //-     li
-      //-       a(href='login.html') Login
-      //-     |               |
-      //-     li
-      //-       a(href='register.html') Register
-      //-     |               |
-      //-     .clearfix
-      //- .clearfix
+            li
+              a(href='/') HOME
+
+            li
+              a(href='/rest') RESTAURANT
+
+            li
+              a(href='feedback/add') FEEDBACK
+
+            li
+              a(href='/logout') LOGOUT
+            li  
+              .cart.box_1
+                h3
+                  span.simpleCart_total  Rs0.00 
+                  |  (
+                  span#simpleCart_quantity.simpleCart_quantity  0 
+                  |  items)
+                  img(src='/images/cart.jpeg', alt='')
+              .clearfix 
 // header-section-ends
 form.form_post(action='#', name='myform', method='post', onsubmit='return validation()')
   .order-section-page
@@ -115,31 +127,30 @@ form.form_post(action='#', name='myform', method='post', onsubmit='return valida
           h3 Order Form
         .col-md-6.order-form-grids
           .order-form-grid.wow.fadeInLeft(data-wow-delay='0.4s')
+            br
+            br
+            br
             h5 Order Information
             span Type of Order
             .dropdown-button
               select.dropdown(tabindex='9', data-settings='{"wrapperClass":"flat"}')
                 option(value='0') Pick up
                 option(value='1') Delivery
-            span Restaurant Location
-            input.text(style='', type='text', name='name', placeholder='Resturant Location ', required='')
+            span Your Address
             br
-            span Location name
+            input.text(style='', type='text', name='locname', placeholder='Address', required='')
             br
-            input.text(style='', type='text', name='locname', placeholder='Location name', required='')
-            br
-            span cuisine-name
-            br
-            input.text(style='', type='text', name='cusinename', placeholder='Cuisine name', required='')
-            input.text(type='text', name='time',value='Time', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Time';}", required='')
             br
             .wow.swing.animated(data-wow-delay='0.4s')
-              input(type='Submit', value='order now')
+              //-input(type='Submit', value='order now')
+              button(onclick='myFunction()') Order Now
+
         .col-md-6.ordering-image.wow.bounceIn(data-wow-delay='0.4s')
           img.img-responsive(src='https://edge.alluremedia.com.au/m/g/2016/05/shutterstock_266811803_1080.jpg', alt='')
 // footer-section-starts
 .footer
   .container
+    p.wow.fadeInLeft(data-wow-delay='0.4s') &copy; FOODSETGO
 // footer-section-ends
 
 

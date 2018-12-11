@@ -12,7 +12,6 @@ ol,ul
 blockquote,q
 {
     quotes:none;
-
 }
 #id {
 
@@ -21,8 +20,7 @@ color:violet;
 }
 #pic
 {
-   
-    background-image: url("/images/orange.jpg");
+    background-image: url("/images/t1.png");
 }
 
 blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
@@ -38,10 +36,10 @@ a{text-decoration:none;}
 
 .pos-relative{position:relative;}
 .pos-absolute{position:absolute;}
-.vertical-base{	vertical-align:baseline;}
-.vertical-top{	vertical-align:top;}
+.vertical-base{vertical-align:baseline;}
+.vertical-top{vertical-align:top;}
 nav.vertical ul li{	display:block;}
-nav.horizontal ul li{	display: inline-block;}
+nav.horizontal ul li{display: inline-block;}
 img{max-width:100%;}
 
 
@@ -82,7 +80,7 @@ input[type="submit"],a,.agileinfo_social_icons li{
  
 /*-- banner --*/
 .center-container{
-	padding:0em 0;
+	padding:1em 0;
 }
 .copy_right{
 	padding:1em 0;
@@ -113,6 +111,9 @@ input[type="submit"],a,.agileinfo_social_icons li{
 	text-transform: uppercase;
 	letter-spacing:2px;
 }
+label{
+	margin-left:10px;
+}
 .main_grid{
 	width: 35%;
     padding: 2em;
@@ -120,8 +121,11 @@ input[type="submit"],a,.agileinfo_social_icons li{
     background:rgba(120, 109, 118, 0.36);
 }
 .main_grid span {
-    padding: .5em 0;
-    display: block;
+    padding: 0.5em 0;
+		display: block;
+}
+.agileits_grid1{
+	margin-left: 40px;
 }
 .main_grid span label{
     color: #FFFFFF;
@@ -151,9 +155,9 @@ input[type="submit"],a,.agileinfo_social_icons li{
 .main_grid input[type="text"], #category, #category1, #risk, #priority, .main_grid input[type="email"], .main_grid textarea {
     outline: none;
     color: #fff;
-    padding: 10px;
+		padding: 2px;
     font-size: 14px;
-    margin-left: 95px;
+    margin-left: 5px;
 }
 .main_grid input[type="Password"], #category, #category1, #risk, #priority, .main_grid input[type="email"], .main_grid textarea {
     outline: none;

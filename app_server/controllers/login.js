@@ -1,5 +1,6 @@
 var mongoose=require("mongoose");
 var User = mongoose.model("User");
+var rev=mongoose.model("Review");
 
 module.exports.login = function(req, res) {
     res.render("login", {

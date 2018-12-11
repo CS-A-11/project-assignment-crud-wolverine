@@ -12,10 +12,8 @@ var ctrlfeedback = require("../controllers/feedback");
 var ctrlmain=require("../controllers/main");
 var ctrlrest=require("../controllers/rest");
 var ctrlmenu=require("../controllers/menu");
-<<<<<<< HEAD
 var ctrlmenus=require("../controllers/menus");
-=======
->>>>>>> 018408f96efa061166d3d05643f1c0eb9a6425de
+var ctrlsearch=require("../controllers/search");
  /* Locations pages */
 //  router.get("/", ctrlHome.homelist);
 //  router.get("/location", ctrlHome.locationInfo);
@@ -37,38 +35,25 @@ router.get("/orders", ctrlorders.orders);
 router.post("/orders", ctrlorders.orderSchema);
 
 
+router.get("/feedback/:id/delete", ctrlfeedback.locationsDeleteOne);
 router.get("/feedback/add", ctrlfeedback.feedRead);
 router.post("/feedback/add",ctrlfeedback.feedCreate);
-<<<<<<< HEAD
-router.get("/feedback/add/read",ctrlfeedback.feedReadAll);
-=======
->>>>>>> 018408f96efa061166d3d05643f1c0eb9a6425de
-// router.post("/rest/:restid/reviews", ctrlfeedback.reviewsCreate);
-// router.get(
-//   "/rest/:restid/reviews/:reviewid",
-//   ctrlfeedback.reviewsReadOne
-// );
-// router.put(
-//   "/rest/:restid/reviews/:reviewid",
-//   ctrlfeedback.reviewsUpdateOne
-// );
-// router.delete(
-//   "/rest/:restid/reviews/:reviewid",
-//   ctrlfeedback.reviewsDeleteOne
-// );
-//router.post("/feedback/add",ctrlfeedback.feedCreate);
-//router.get("/feedback/:feedbackid",ctrlfeedback.feedReadrev);
+router.get("/feedback/read",ctrlfeedback.feedReadAll);
+router.get("/feedback/:id",ctrlfeedback.locationsRead)
+router.post("/feedback/:id",ctrlfeedback.locationsUpdateOne);
+
+router.get('/search',ctrlsearch.home);
 
 router.get("/rest",ctrlrest.home);
 router.get("/rest", ctrlrest.restListByDistance);
+router.get("/rest", ctrlrest.searchAJAX);
+
 //router.post("/rest", ctrlrest.restCreate);
 //router.get("/rest/:restid", ctrlrest.restReadOne);
 router.get("/rest/:restid",ctrlrest.restInfo);
 
 router.get("/menu",ctrlmenu.home);
-<<<<<<< HEAD
+router.get("/menu",ctrlmenu.menucreate);
 router.get("/menu/order",ctrlmenus.orderPlaced);
-=======
->>>>>>> 018408f96efa061166d3d05643f1c0eb9a6425de
 
 module.exports = router;

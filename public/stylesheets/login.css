@@ -100,7 +100,7 @@ input[type="submit"],a,.agileinfo_social_icons li{
     font-size: 16px;
 }
 .copy_right p a{
-	color:#cd31c1;
+	color:#e4b51a;
 	text-decoration:none;
 }
 .copy_right p a:hover{
@@ -223,12 +223,12 @@ input[type="submit"],a,.agileinfo_social_icons li{
 	text-transform:uppercase;
 	font-size:14px;
 	color:#fff;
-	background:#cd31c1;
+	background:#e4b51a;
 	border:none;
 	cursor:pointer;
 }
 .main_grid2_right input[type="submit"]:hover{
-	background:#df49d3;
+	background:#e4b51a;
 }
 .grid-layouts1 ul li,.grid-layouts2 ul li{
 	color: #fff;
@@ -286,13 +286,13 @@ ul li .check::before {
     -webkit-transition: background 0.25s linear;
 }
 input[type=radio]:checked ~ .check {
-	border: 2px solid #cd31c1;
+	border: 2px solid #e4b51a;
 }
 input[type=radio]:checked ~ .check::before{
-	background: #cd31c1;
+	background: #e4b51a;
 }
 input[type=radio]:checked ~ label{
-	color: #cd31c1;
+	color: #e4b51a;
 }
 /*-- /radio button --*/
 .form-ls {

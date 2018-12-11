@@ -3,13 +3,9 @@ head
   title MENU
   link(rel='stylesheet', href='/stylesheets/bootstraporder.css')
   // jQuery (necessary for Bootstrap's JavaScript plugins)
-<<<<<<< HEAD
   script(src='/javascripts/jquery.min1.js')
-=======
-  script(src='/javascripts/js/jquery.min1.js')
->>>>>>> 018408f96efa061166d3d05643f1c0eb9a6425de
   // Custom Theme files
-  link(rel='stylesheet', href='/stylesheets/styleorder.css')
+  link(rel='stylesheet', href='/stylesheets/styleorder3.css')
   // Custom Theme files
   meta(name='viewport', content='width=device-width, initial-scale=1')
   script(type='application/x-javascript').
@@ -18,7 +14,6 @@ head
   link(href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic', rel='stylesheet', type='text/css')
   link(href='//fonts.googleapis.com/css?family=Lobster+Two:400,400italic,700,700italic', rel='stylesheet', type='text/css')
   // Animation
-<<<<<<< HEAD
   script(type='text/javascript', src='/javascripts/wow.min.js')
   link(rel='stylesheet', href='/stylesheets/animateorder.css')
   script
@@ -30,24 +25,10 @@ head
     $(".scroll").click(function(event){
     event.preventDefault();
     $('html,body').animate({scrollTop:Rs(this.hash).offset().top},1200);
-=======
-  script(src='/javascripts/js/wow.min.js')
-  link(rel='stylesheet', href='/stylesheets/animateorder.css')
-  script.
-    new WOW().init();
-  script(type='text/javascript', src='js/move-top.js')
-  script(type='text/javascript', src='js/easing.js')
-  script(type='text/javascript').
-    jQuery(document).ready(function(Rs) {
-    Rs(".scroll").click(function(event){
-    event.preventDefault();
-    Rs('html,body').animate({scrollTop:Rs(this.hash).offset().top},1200);
->>>>>>> 018408f96efa061166d3d05643f1c0eb9a6425de
     });
     });
   script(src='/javascripts/simpleCart.min.js')
 // header-section-starts
-<<<<<<< HEAD
 header#mu-header
   nav.navbar.navbar-default.mu-main-navbar(role='navigation')
     .container
@@ -67,12 +48,13 @@ header#mu-header
           span Go
         // Image based logo
         // <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Logo img"></a>
+      br
       #navbar.navbar-collapse.collapse
         if user
           ul#top-menu.nav.navbar-nav.navbar-right.mu-main-nav
 
             li
-              a(href='orders') ORDERS
+              a(href='/') HOME
 
             li
               a(href='/rest') RESTAURANT
@@ -84,61 +66,31 @@ header#mu-header
               a(href='/logout') LOGOUT
             li  
               .cart.box_1
-                a(href='/menu/order') Order Placed
-                  h3
-                    span.simpleCart_total  Rs0.00 
-                    |  (
-                    span#simpleCart_quantity.simpleCart_quantity  0 
-                    |  items)
-                    img(src='/images/cart.jpeg', alt='')
-                p
-                  a.simpleCart_empty(href='javascript:;') Empty card
-                .clearfix 
+                
+                h3
+                  span.simpleCart_total  Rs0.00 
+                  |  (
+                  span#simpleCart_quantity.simpleCart_quantity  0 
+                  |  items)
+                  img(src='/images/cart.jpeg', alt='')
+              p
+                a.simpleCart_empty(href='javascript:;') Empty card
+              .clearfix 
 
-=======
-.header
-  .container
-    .top-header
-      .header-right
-        .cart.box_1
-          a(href='checkout')
-            h3
-              span.simpleCart_total  Rs0.00 
-              |  (
-              span#simpleCart_quantity.simpleCart_quantity  0 
-              |  items)
-              img(src='/images/cart.jpeg', alt='')
-          p
-            a.simpleCart_empty(href='javascript:;') Empty card
-          .clearfix 
-      .clearfix
-  .menu-bar
-    .container
-      .top-menu
-        ul
-          li
-            a(href='/') Home
-          |               |
-          li
-            a(href='/orders') Order
-          |                |
-          li
-            a(href='/rest') Restaurant
-          //-.clearfix
-          .clearfix
-      .clearfix
->>>>>>> 018408f96efa061166d3d05643f1c0eb9a6425de
 // header-section-ends
 // content-section-starts
 .orders
   .container
+  h1 Pizzas
+  -var index=0;
+  each entry in pizza
     .order-top
       li.item-lists
-        h4 Pizzas
-        p Exotic Combo of Cheese &amp; Basil
-        p  Capsicum, Tomatoes, Onion
-        p  Chicken Tikka &amp; Cheese
-        p  Chicken Stripse
+        //-h4 Pizzas
+        p #{entry.desc}
+        //-p #{entry.desc2}
+        //-p #{entry.desc3}
+        //-p #{entry.desc4}
       li.item-lists
         .special-info.grid_1.simpleCart_shelfItem
           h4 Price
@@ -146,50 +98,25 @@ header#mu-header
             .pr-left
               .item_add
                 span.item_price
-                  h6 ONLY Rs30.00
+                  h6 #{entry.price}
             .pr-right
               .item_add
                 span.item_price
-                  a(href='#') Pick
-            .clearfix
-          .pre-top
-            .pr-left
-              .item_add
-                span.item_price
-                  h6 ONLY Rs30.00
-            .pr-right
-              .item_add
-                span.item_price
-                  a(href='#') Pick
-            .clearfix
-          .pre-top
-            .pr-left
-              .item_add
-                span.item_price
-                  h6 ONLY Rs30.00
-            .pr-right
-              .item_add
-                span.item_price
-                  a(href='#') Pick
-            .clearfix
-          .pre-top
-            .pr-left
-              .item_add
-                span.item_price
-                  h6 ONLY Rs30.00
-            .pr-right
-              .item_add
-                span.item_price
-                  a(href='#') Pick
+                  a(href='#') #{entry.pick}
             .clearfix
       .clearfix
+  -index++;
+  
+  h1 Burgers
+  -var index1=0;
+  each entry in burger
     .order-top
       li.item-lists
-        h4 Burgers
-        p Vegetable Patty With Coleslaw
-        p Fajita Paneer &amp; Vegetable
-        p Chicken Patty With Vegetable
-        p Chicken Cut in Mexican Style
+        //-h4 #{entry.name}
+        p #{entry.desc}
+        //-p #{entry.desc2}
+        //-p #{entry.desc3}
+        //-p #{entry.desc4}
       li.item-lists
         .special-info.grid_1.simpleCart_shelfItem
           h4 Price
@@ -197,49 +124,25 @@ header#mu-header
             .pr-left
               .item_add
                 span.item_price
-                  h6 ONLY Rs30.00
+                  h6 #{entry.price}
             .pr-right
               .item_add
                 span.item_price
-                  a(href='#') Pick
-            .clearfix
-          .pre-top
-            .pr-left
-              .item_add
-                span.item_price
-                  h6 ONLY Rs30.00
-            .pr-right
-              .item_add
-                span.item_price
-                  a(href='#') Pick
-            .clearfix
-          .pre-top
-            .pr-left
-              .item_add
-                span.item_price
-                  h6 ONLY Rs30.00
-            .pr-right
-              .item_add
-                span.item_price
-                  a(href='#') Pick
-            .clearfix
-          .pre-top
-            .pr-left
-              .item_add
-                span.item_price
-                  h6 ONLY Rs30.00
-            .pr-right
-              .item_add
-                span.item_price
-                  a(href='#') Pick
+                  a(href='#') #{entry.pick}
             .clearfix
       .clearfix
+  -index1++;
+
+  h1 Desserts
+  -var index2=0;
+  each entry in dessert
     .order-top
       li.item-lists
-        h4 Hot Dogs
-        p Mixed Vegetable With Cheese
-        p Grilled Paneer &amp; Vegetable
-        p Chicken Sausage With Mustard
+        //-h4 #{entry.name}
+        p #{entry.desc}
+        //-p #{entry.desc2}
+        //-p #{entry.desc3}
+        //-p #{entry.desc4}
       li.item-lists
         .special-info.grid_1.simpleCart_shelfItem
           h4 Price
@@ -247,201 +150,157 @@ header#mu-header
             .pr-left
               .item_add
                 span.item_price
-                  h6 ONLY Rs30.00
+                  h6 #{entry.price}
             .pr-right
               .item_add
                 span.item_price
-                  a(href='#') Pick
-            .clearfix
-          .pre-top
-            .pr-left
-              .item_add
-                span.item_price
-                  h6 ONLY Rs30.00
-            .pr-right
-              .item_add
-                span.item_price
-                  a(href='#') Pick
-            .clearfix
-          .pre-top
-            .pr-left
-              .item_add
-                span.item_price
-                  h6 ONLY Rs30.00
-            .pr-right
-              .item_add
-                span.item_price
-                  a(href='#') Pick
+                    a(href='#') #{entry.pick}
             .clearfix
       .clearfix
-    .order-top
-      li.item-lists
-        h4 Desserts
-        p (Black Forest/Truffle/Noughat)
-        p Apple Pie With Ice Cream
-      li.item-lists
-        .special-info.grid_1.simpleCart_shelfItem
-          h4 Price
-          .pre-top
-            .pr-left
-              .item_add
-                span.item_price
-                  h6 ONLY Rs30.00
-            .pr-right
-              .item_add
-                span.item_price
-                  a(href='#') Pick
-            .clearfix
-          .pre-top
-            .pr-left
-              .item_add
-                span.item_price
-                  h6 ONLY Rs30.00
-            .pr-right
-              .item_add
-                span.item_price
-                  a(href='#') Pick
-            .clearfix
-      .clearfix
-    .order-top
-      li.item-lists
-        h4 Cold Beverages
-        p Strawberry Milk Shake
-        p Chocolate Milk Shake
-      li.item-lists
-        .special-info.grid_1.simpleCart_shelfItem
-          h4 Price
-          .pre-top
-            .pr-left
-              .item_add
-                span.item_price
-                  h6 ONLY Rs30.00
-            .pr-right
-              .item_add
-                span.item_price
-                  a(href='#') Pick
-            .clearfix
-          .pre-top
-            .pr-left
-              .item_add
-                span.item_price
-                  h6 ONLY Rs30.00
-            .pr-right
-              .item_add
-                span.item_price
-                  a(href='#') Pick
-            .clearfix
-      .clearfix
-    .order-top
-      li.item-lists
-        h4 Sandwiches
-        p (Mint With Cheese Tomato)
-        p (Fresh Tomatoes, Cucumber)
-      li.item-lists
-        .special-info.grid_1.simpleCart_shelfItem
-          h4 Price
-          .pre-top
-            .pr-left
-              .item_add
-                span.item_price
-                  h6 ONLY Rs30.00
-            .pr-right
-              .item_add
-                span.item_price
-                  a(href='#') pick
-            .clearfix
-          .pre-top
-            .pr-left
-              .item_add
-                span.item_price
-                  h6 ONLY Rs30.00
-            .pr-right
-              .item_add
-                span.item_price
-                  a(href='#') pick
-            .clearfix
-      .clearfix
-    .order-top
-      li.item-lists
-        h4 Exotic Cakes
-        p Pineapple Flavoured Cream)
-        p A Chocolate Sponge Base
-      li.item-lists
-        .special-info.grid_1.simpleCart_shelfItem
-          h4 Price
-          .pre-top
-            .pr-left
-              .item_add
-                span.item_price
-                  h6 ONLY Rs30.00
-            .pr-right
-              .item_add
-                span.item_price
-                  a(href='#') pick
-            .clearfix
-          .pre-top
-            .pr-left
-              .item_add
-                span.item_price
-                  h6 ONLY Rs30.00
-            .pr-right
-              .item_add
-                span.item_price
-                  a(href='#') pick
-            .clearfix
-      .clearfix
-    br
-    .order-top
-      li.item-lists
-        h4 Ice Creams
-        p Butter Scotch
-        p Pineapple
-        p Black Forest
-        p Chocolate with Orange
-      li.item-lists
-        .special-info.grid_1.simpleCart_shelfItem
-          h4 Price
-          .pre-top
-            .pr-left
-              .item_add
-                span.item_price
-                  h6 ONLY Rs30.00
-            .pr-right
-              .item_add
-                span.item_price
-                  a(href='#') pick
-            .clearfix
-          .pre-top
-            .pr-left
-              .item_add
-                span.item_price
-                  h6 ONLY Rs30.00
-            .pr-right
-              .item_add
-                span.item_price
-                  a(href='#') pick
-            .clearfix
-          .pre-top
-            .pr-left
-              .item_add
-                span.item_price
-                  h6 ONLY Rs30.00
-            .pr-right
-              .item_add
-                span.item_price
-                  a(href='#') pick
-            .clearfix
-          .pre-top
-            .pr-left
-              .item_add
-                span.item_price
-                  h6 ONLY Rs30.00
-            .pr-right
-              .item_add
-                span.item_price
-                  a(href='#') pick
-            .clearfix
-      .clearfix
+  -index2++;
+   
+   .col-md-7.buy
+     a.morebtn.hvr-rectangle-in(href='/orders') Order Now
+   //-input(type='button', value='Order now' href='/orders')
+    //- .order-top
+    //-   li.item-lists
+    //-     h4 Cold Beverages
+    //-     p Strawberry Milk Shake
+    //-     p Chocolate Milk Shake
+    //-   li.item-lists
+    //-     .special-info.grid_1.simpleCart_shelfItem
+    //-       h4 Price
+    //-       .pre-top
+    //-         .pr-left
+    //-           .item_add
+    //-             span.item_price
+    //-               h6 ONLY Rs30.00
+    //-         .pr-right
+    //-           .item_add
+    //-             span.item_price
+    //-               a(href='#') Pick
+    //-         .clearfix
+    //-       .pre-top
+    //-         .pr-left
+    //-           .item_add
+    //-             span.item_price
+    //-               h6 ONLY Rs30.00
+    //-         .pr-right
+    //-           .item_add
+    //-             span.item_price
+    //-               a(href='#') Pick
+    //-         .clearfix
+    //-   .clearfix
+    //- .order-top
+    //-   li.item-lists
+    //-     h4 Sandwiches
+    //-     p (Mint With Cheese Tomato)
+    //-     p (Fresh Tomatoes, Cucumber)
+    //-   li.item-lists
+    //-     .special-info.grid_1.simpleCart_shelfItem
+    //-       h4 Price
+    //-       .pre-top
+    //-         .pr-left
+    //-           .item_add
+    //-             span.item_price
+    //-               h6 ONLY Rs30.00
+    //-         .pr-right
+    //-           .item_add
+    //-             span.item_price
+    //-               a(href='#') pick
+    //-         .clearfix
+    //-       .pre-top
+    //-         .pr-left
+    //-           .item_add
+    //-             span.item_price
+    //-               h6 ONLY Rs30.00
+    //-         .pr-right
+    //-           .item_add
+    //-             span.item_price
+    //-               a(href='#') pick
+    //-         .clearfix
+    //-   .clearfix
+    //- .order-top
+    //-   li.item-lists
+    //-     h4 Exotic Cakes
+    //-     p Pineapple Flavoured Cream)
+    //-     p A Chocolate Sponge Base
+    //-   li.item-lists
+    //-     .special-info.grid_1.simpleCart_shelfItem
+    //-       h4 Price
+    //-       .pre-top
+    //-         .pr-left
+    //-           .item_add
+    //-             span.item_price
+    //-               h6 ONLY Rs30.00
+    //-         .pr-right
+    //-           .item_add
+    //-             span.item_price
+    //-               a(href='#') pick
+    //-         .clearfix
+    //-       .pre-top
+    //-         .pr-left
+    //-           .item_add
+    //-             span.item_price
+    //-               h6 ONLY Rs30.00
+    //-         .pr-right
+    //-           .item_add
+    //-             span.item_price
+    //-               a(href='#') pick
+    //-         .clearfix
+    //-   .clearfix
+    //- br
+    //- .order-top
+    //-   li.item-lists
+    //-     h4 Ice Creams
+    //-     p Butter Scotch
+    //-     p Pineapple
+    //-     p Black Forest
+    //-     p Chocolate with Orange
+    //-   li.item-lists
+    //-     .special-info.grid_1.simpleCart_shelfItem
+    //-       h4 Price
+    //-       .pre-top
+    //-         .pr-left
+    //-           .item_add
+    //-             span.item_price
+    //-               h6 ONLY Rs30.00
+    //-         .pr-right
+    //-           .item_add
+    //-             span.item_price
+    //-               a(href='#') pick
+    //-         .clearfix
+    //-       .pre-top
+    //-         .pr-left
+    //-           .item_add
+    //-             span.item_price
+    //-               h6 ONLY Rs30.00
+    //-         .pr-right
+    //-           .item_add
+    //-             span.item_price
+    //-               a(href='#') pick
+    //-         .clearfix
+    //-       .pre-top
+    //-         .pr-left
+    //-           .item_add
+    //-             span.item_price
+    //-               h6 ONLY Rs30.00
+    //-         .pr-right
+    //-           .item_add
+    //-             span.item_price
+    //-               a(href='#') pick
+    //-         .clearfix
+    //-       .pre-top
+    //-         .pr-left
+    //-           .item_add
+    //-             span.item_price
+    //-               h6 ONLY Rs30.00
+    //-         .pr-right
+    //-           .item_add
+    //-             span.item_price
+    //-               a(href='#') pick
+    //-         .clearfix
+    //-   .clearfix
 // content-section-ends
 // footer-section-starts
 .footer
@@ -449,11 +308,7 @@ header#mu-header
     p.wow.fadeInLeft(data-wow-delay='0.4s') &copy; FOODSETGO
 // footer-section-ends
 script(type='text/javascript').
-<<<<<<< HEAD
   $(document).ready(function() {
-=======
-  Rs(document).ready(function() {
->>>>>>> 018408f96efa061166d3d05643f1c0eb9a6425de
   /*
   var defaults = {
   containerID: 'toTop', // fading element id
@@ -462,11 +317,7 @@ script(type='text/javascript').
   easingType: 'linear'
   };
   */
-<<<<<<< HEAD
   $().UItoTop({ easingType: 'easeOutQuart' });
-=======
-  Rs().UItoTop({ easingType: 'easeOutQuart' });
->>>>>>> 018408f96efa061166d3d05643f1c0eb9a6425de
   });
 a#toTop(href='#', style='display: block;')
   span#toTopHover(style='opacity: 1;')  

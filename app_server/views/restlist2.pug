@@ -1,4 +1,5 @@
 doctype html
+html(ng-app='loc8rApp')
 head
   title Restaurants
   link(rel='stylesheet', href='/stylesheets/bootstraporder.css')
@@ -19,7 +20,6 @@ head
   link(rel='stylesheet', href='/stylesheets/animateorder.css')
   script.
     new WOW().init();
-script(src="/magic.js")
   script(type='text/javascript', src='js/move-top.js')
   script(type='text/javascript', src='js/easing.js')
   script(type='text/javascript').
@@ -30,22 +30,6 @@ script(src="/magic.js")
     });
     });
   script(src='/javascripts/js/simpleCart.min.js')
-  script(type='text/javascript').
-    $(document).ready(function(){
-        
-    $.ajax({url: "/demo_test.txt", success: function(result){
-    $("#shamsa").html(result);
-    }});  
-
-    $("#search").on("keyup", function(e) {
-    if (e.keyCode === 13) {
-    var parameters = { search: $(this).val() };
-    $.get("/rest", parameters, function(data) {
-    $("#results").html(data[0].name);
-    });
-    }
-    });
-    });
 // header-section-starts
 header#mu-header
   nav.navbar.navbar-default.mu-main-navbar(role='navigation')
@@ -69,10 +53,7 @@ header#mu-header
       #navbar.navbar-collapse.collapse
         if user
           ul#top-menu.nav.navbar-nav.navbar-right.mu-main-nav
-            li
-              a(href='/') HOME
-            li
-              a(href='/search') SEARCH
+
             li
               a(href='/rest') RESTAURANT
 
@@ -82,45 +63,35 @@ header#mu-header
             li
               a(href='/logout') LOGOUT
 // header-section-ends
-h1= "FAST Library"
-#shamsa
-input#search(type="search", placeholder="Search Books")
-#results
   
 // content-section-starts
 br
-br
+
 .Popular-Restaurants-content
   .Popular-Restaurants-grids
     .container
-    -var index=0;
-    each entry in rests
-      .Popular-Restaurants-grid.wow.fadeInRight(data-wow-delay='0.4s')
-     
-        .col-md-3.restaurent-logo
-          img.img-responsive(src=entry.image, alt='')
-        .col-md-2.restaurent-title
-          .logo-title
-          
-            h4
-              //-a(href='/rest/:restid')= entry.name
-              a(href='/rest/' +  entry._id)= entry.name
-
-          .rating
-            span ratings
-            a(href='#')
-              img.img-responsive(src='images/star1.jpeg', alt='')
-        .col-md-7.buy
-          a.morebtn.hvr-rectangle-in(href='/menu') buy
+       .row
+        .col-xs-12.col-sm-8(ng-controller="locationListCtrl") 
+          label(for="filter") Filter results
+          input#filter(type="text", name="filter", ng-model="textFilter") 
+          .row.list-group
+            .col-xs-12.list-group-item(ng-repeat="location in data.rests | filter : textFilter")
+              
+              h4 
+                a(href="/rest/{{ location._id }}") {{ location.name }}
+              .col-md-7.buy
+                        a.morebtn.hvr-rectangle-in(href='/menu') {{location.buy}}
+              .rating
+                span ratings
+                a(href='#')
+                  img.img-responsive(src='images/star1.jpeg', alt='')
         .clearfix
-    -index++;
-      
-      .footer
-        .container
-          p.wow.fadeInLeft(data-wow-delay='0.4s') &copy; FOODSETGO
+.footer
+  .container
+     p.wow.fadeInLeft(data-wow-delay='0.4s') &copy; FOODSETGO
       // footer-section-ends
-      script(type='text/javascript').
-        $(document).ready(function() {
+  script(type='text/javascript').
+   $(document).ready(function() {
         /*
         var defaults = {
         containerID: 'toTop', // fading element id
@@ -129,7 +100,11 @@ br
         easingType: 'linear'
         };
         */
-        $().UItoTop({ easingType: 'easeOutQuart' });
-        });
-      a#toTop(href='#', style='display: block;')
-        span#toTopHover(style='opacity: 1;')  
+    $().UItoTop({ easingType: 'easeOutQuart' });
+      });
+    a#toTop(href='#', style='display: block;')
+    span#toTopHover(style='opacity: 1;')  
+
+  script(src='/bootstrap/js/bootstrap.min.js')
+  script(src='/angular/angular.min.js') 
+  script(src='/angular/loc8rApp.js')

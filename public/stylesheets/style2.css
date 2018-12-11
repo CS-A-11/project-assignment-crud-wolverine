@@ -1,6 +1,6 @@
 
 body {
-  background-color: #ffffff;
+  background-color: #f0e8d3;
   font-family: "Prata", serif;
   color: #333333;
   font-size: 15px;
@@ -130,7 +130,8 @@ img {
 
 .mu-send-btn:hover, 
 .mu-send-btn:focus {
-  color: #fff;
+  color: rgb(8, 8, 8);
+  font-weight: bolder;
 }
 
 
@@ -1252,7 +1253,7 @@ RESERVATION SECTION
 ====================*/
 
 #mu-contact {
-  background-color: #f8f8f8;
+  background-color: #f1e7c6;
   display: inline;
   float: left;
   padding: 100px 0;
@@ -1367,7 +1368,7 @@ RESERVATION SECTION
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   color: #468847;
   background-color: #dff0d8;
-  border: 1px solid #d6e9c6;
+  border: 1px solid #e9e3c6;
   -webkit-border-radius: 4px;
    -moz-border-radius: 4px;
         border-radius: 4px;
@@ -1431,7 +1432,7 @@ RESERVATION SECTION
 .mu-footer-social a {
   background-color: #555;
   border-radius: 50%;
-  color: #fff;
+  color: rgb(230, 174, 23);
   display: inline-block;
   font-size: 20px;
   height: 45px;
@@ -1456,7 +1457,7 @@ RESERVATION SECTION
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   letter-spacing: 0.5px;
-  color: #fff;
+  color: rgb(231, 177, 60);
 }
 
 .mu-footer-copyright p a {

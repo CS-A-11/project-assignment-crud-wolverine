@@ -32,7 +32,7 @@ label{
 	margin:0;
 }
 .header {
-	border-top: 3px solid #5BBD50;
+	border-top: 3px solid rgb(223, 155, 28);
 }
 .top-header{
 	padding:2em 0;
@@ -51,7 +51,7 @@ label{
   text-decoration: none;
   color: #fff;
   font-size: 1.1em;
-  background:#D96B66;
+  background:rgb(214, 179, 21);
   padding: 0.4em 2em;
   border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -62,7 +62,7 @@ label{
 }
 .header-right li a:hover{
   color: #fff;
-  background: #5fa022;
+  background: #d6b318;
 }
 .header-right {
   float: right;
@@ -123,10 +123,10 @@ a.simpleCart_empty {
 	text-transform:uppercase;
 }
 .top-menu ul li.active a{
-	color:#5BBD50;
+	color:rgb(219, 177, 38);
 }
 .top-menu ul li a:hover{
-	color:#5BBD50;
+	color:rgb(211, 180, 44);
 }
 .login-section ul li{
 	display:inline-block;
@@ -441,7 +441,7 @@ a.simpleCart_empty {
 }
 .ordering-section-grid-process span{
 	font-weight:300;
-	color:#5BBD50;
+	color:rgb(211, 170, 35);
 	font-size:18px;
 }
 .top-cuisine-grid {
@@ -464,7 +464,7 @@ a.simpleCart_empty {
 	margin-right:0;
 }
 .top-cuisine-grid:hover label{
-	background: #5BBD50;
+	background: rgb(196, 171, 32);
 	color:#fff;
 }
 .nth-grid1{
@@ -493,7 +493,7 @@ a.simpleCart_empty {
 	width: 68%;
 }
 .icon-data h4{
-	color:#5BBD50;
+	color:rgb(214, 182, 41);
 	font-size:1.4em;
 	font-family: 'Lobster Two', cursive;
 	font-weight:700;
@@ -544,7 +544,7 @@ a.simpleCart_empty {
 .service-section-top-row-grid4 input[type="submit"]{
 	outline: none;
 	border: 3px solid #fff;
-	background: #5BBD50;
+	background: rgb(211, 160, 20);
 	color: #fff;
 	font-size: 18px;
 	font-weight: 700;
@@ -552,7 +552,7 @@ a.simpleCart_empty {
 	border-radius: 5px;
 }
 .service-section-top-row-grid4 input[type="submit"]:hover{
-	border: 3px solid #5BBD50;
+	border: 3px solid rgb(212, 194, 29);
 	background:#C92C0E;
 }
 .icon-data p{
@@ -664,14 +664,12 @@ a.simpleCart_empty {
 	border-radius:5px;
 }
 .contact-section-grid input[type="submit"]:hover{
-	background:#5BDD4C;
+	background:rgb(212, 182, 12);
 }
 
 /*-- orders-list --*/
 .orders {
 	padding: 6em 0;
-	color:rgb(231, 180, 12);
-	margin-left:13px;
 }
 .order-top h4 {
 	color: rgb(226, 165, 52);
@@ -681,11 +679,10 @@ a.simpleCart_empty {
 }
 .order-top p {
   color: #0f0f0f;
-  font-size: 20px;
+  font-size: 1em;
   font-weight: 400;
   line-height: 1.8em;
-	margin: 1em 0;
-	margin-top:40px; 
+  margin: 1em 0;
 }
 .order-top h6 {
   color: #0a0a0a;
@@ -2142,7 +2139,7 @@ address {
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	user-select: none;
-	border:1px solid #5BBD50;
+	border:1px solid rgb(190, 174, 30);
 	margin: 0.5em 0 1.5em 0;
 }
 .flat.open{
@@ -2267,7 +2264,7 @@ address {
 	color:#FFF;
 }
 .flat li.active{
-    background-color:#5BBD50;
+    background-color:rgb(212, 184, 57);
 	color: #fff;
 }
 .ordering-form {
@@ -2307,7 +2304,7 @@ address {
 	margin:1em 0;
 	font-weight:600;
 	font-size:16px;
-	border: 1px solid #5BBD50;
+	border: 1px solid rgb(199, 182, 25);
 }
 .order-form-grid input[type="button"]{
 	display: block;
@@ -2316,7 +2313,7 @@ address {
 	text-transform: uppercase;
 	font-weight: 700;
 	border:none;
-	background:#5BBD50;
+	background:rgb(196, 149, 20);
 	color:#fff;
 	margin: 1em 0 0 8em;
 	
@@ -2328,13 +2325,13 @@ address {
 	text-transform: uppercase;
 	font-weight: 700;
 	border:none;
-	background:#5BBD50;
+	background:rgb(212, 176, 15);
 	color:#fff;
 	margin: 1em 0 0 8em;
 	
 }
 .order-form-grid input[type="button"]:hover{
-	background:rgb(221, 171, 34);
+	background:rgb(175, 133, 18);
 }
 /*-- popular-restaurent--*/
 .Popular-Restaurants-content{
@@ -3027,7 +3024,6 @@ a.morebtn{
 	.ordering-section-grid {
 		min-height: 170px;
 	}
-
 	.ordering-section-grid-process {
 		top: -12%;
 	}
@@ -5958,13 +5954,12 @@ body {
   
   }
   
-  
   @media (max-width: 320px) {
   
 	#mu-gallery .mu-gallery-area .mu-gallery-content .mu-gallery-body .mu-single-gallery .mu-single-gallery-item .mu-single-gallery-info {
 	  padding-top: 25.5%;
 	}
   
-	
+
   }
   

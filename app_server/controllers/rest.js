@@ -14,6 +14,7 @@ var sendJSONresponse = function(res, status, content) {
     res.render("restlist",{
       rests:[
         {
+          _id:"5bf16434fc21db00cce170e8",
           name: "PizzaHut",
           address: "Milad Street",
           rating: 2,
@@ -21,6 +22,7 @@ var sendJSONresponse = function(res, status, content) {
           image: "/images/pizzahut.jpeg"
         },
         {
+          _id:"5bf16434fc21db00cce170e9",
           name: "Subway",
           address: "Food Street",
           rating: 2,
@@ -97,25 +99,77 @@ module.exports.restReadOne = function(req, res) {
     }
   };
 
-  module.exports.restInfo=function(req,res)
-  {
-    res.render("restinfo",{
-      rests:[
-        {
-          name: "PizzaHut",
-          address: "Milad Street",
-          rating: 2,
-          facilities: ["Hot drinks", "Food", "Premium wifi"],
-          image: "/images/pizzahut.jpeg"
-        },
-        {
-          name: "Subway",
-          address: "Food Street",
-          rating: 2,
-          facilities: ["Hot drinks", "Food", "Premium wifi"],
-          image: "/images/subway.jpeg"
-        }
-      ]
-    });
+  // module.exports.restInfo=function(req,res)
+  // {
+  //   res.render("restinfo",{
+  //     rests:[
+  //       {
+  //         name: "PizzaHut",
+  //         address: "Milad Street",
+  //         rating: 2,
+  //         facilities: ["Hot drinks", "Food", "Premium wifi"],
+  //         image: "/images/pizzahut.jpeg"
+  //       },
+  //       {
+  //         name: "Subway",
+  //         address: "Food Street",
+  //         rating: 2,
+  //         facilities: ["Hot drinks", "Food", "Premium wifi"],
+  //         image: "/images/subway.jpeg"
+  //       }
+  //     ]
+  //   });
 
+  // };
+
+  module.exports.restInfo = function(req, res) {
+    console.log("Finding location details", req.params);
+    if (req.params && req.params.restid) {
+      rest.findById(req.params.restid).exec(function(err, location) {
+        if (!location) {
+          sendJSONresponse(res, 404, {
+            message: "locationid not found"
+          });
+          return;
+        } else if (err) {
+          console.log(err);
+          sendJSONresponse(res, 404, err);
+          return;
+        }
+        //console.log(location);
+        //sendJSONresponse(res, 200, location);
+        res.render("restinfo",{
+          rests:[
+            {
+              name: location.name,
+              address: location.address,
+              rating: location.rating,
+              facilities: location.facilities
+           //   image: "/images/pizzahut.jpeg"
+            }
+          ]
+        });
+      });
+    } else {
+      console.log("No locationid specified");
+      sendJSONresponse(res, 404, {
+        message: "No locationid in request"
+      });
+    }
+  };
+
+  module.exports.searchAJAX = function(req, res) {
+    // input value from search
+    var val = req.query.search;
+    console.log(val);
+    rest.find({ name: val }).exec(function(err, books) {
+      if (!books) {
+        return;
+      } else if (err) {
+        console.log(err);
+        return;
+      }
+      console.log(books);
+      res.send(books);
+    });
   };

@@ -30,6 +30,8 @@ head
 // START SCROLL TOP BUTTON
 a.scrollToTop(href='#')
   i.fa.fa-angle-up
+/////////////////////////////////////////////////////////
+
 // END SCROLL TOP BUTTON
 // Start header section
 
@@ -61,9 +63,6 @@ header#mu-header
 
             li
               a(href='#mu-gallery') GALLERY
-
-            li
-              a(href='orders') ORDERS
 
             li
               a(href='/rest') RESTAURANT
@@ -110,8 +109,7 @@ section#mu-slider
           h2.mu-slider-title To FoodSetGo!
           p Have your favorite restaurants delivered to your door. Order now with FoodSetGo!
           
-          a.mu-readmore-btn.mu-reservation-btn(href='#mu-reservation') PLACE YOUR ORDER
-           a(href='orders')
+         
            
       // / Top slider content
       // / Top slider single slide
@@ -123,7 +121,7 @@ section#mu-slider
           span.mu-slider-small-title Over
           h2.mu-slider-title 500+ Satisfied Customers
           p Share your experience with us now!
-          a.mu-readmore-btn.mu-reservation-btn(href='#mu-reservation')  GIVE FEEDBACK
+    
           //- a(href='feedback/add') GIVE FEEDBACK
         // / Top slider content
       // / Top slider single slide
@@ -135,7 +133,6 @@ section#mu-slider
           span.mu-slider-small-title Over
           h2.mu-slider-title 1000+ Recipes  
           p Share your own recipe with us today!
-          a.mu-readmore-btn.mu-reservation-btn(href='#mu-reservation') ADD YOUR RECIPE
         // / Top slider content
       // / Top slider single slide
 // End slider
@@ -371,7 +368,8 @@ section#mu-contact
                     .form-group
                       label(for='message') Message
                       textarea#message.form-control(name='message', cols='30', rows='10', placeholder='Type Your Message', required='')
-                    button.mu-send-btn(type='submit') Send Message
+                    button.mu-send-btn( type='submit' )
+                      a(href='#')   Send Message
               .col-md-6
                 .mu-contact-right
                   .mu-contact-widget

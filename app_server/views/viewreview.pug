@@ -41,18 +41,52 @@ header#mu-header
           ul#top-menu.nav.navbar-nav.navbar-right.mu-main-nav
 
             li
-              a(href='orders') ORDERS
+              a(href='/') HOME
 
             li
               a(href='/rest') RESTAURANT
 
             li
-              a(href='feedback/add') FEEDBACK
+              a(href='/feedback/add') FEEDBACK
 
             li
               a(href='/logout') LOGOUT
 
 block content
+-var index1=0;
+each entryy in selfLog
+  .cart-items
+    .cart-header3
+      .close3  
+      .cart-sec.simpleCart_shelfItem
+        .cart-item.cyc
+          img.img-responsive(src='/images/gallery/1.jpg', alt='')
+        .cart-item-info
+            
+          h1=entryy.uname
+            
+          h4=entryy.email
+        
+          h4=entryy.restName
+        
+          h4=entryy.comments
+        
+          h4=entryy.ratings
+
+          .col-md-7.buy
+          a.morebtn.hvr-rectangle-in(href="/feedback/"+entryy._id) Edit
+          //- a.btn(href="/feedback/"+entryy._id) Edit
+          .col-md-7.buy
+          a.morebtn.hvr-rectangle-in(href="/feedback/"+entryy._id+"/delete") Delete
+          //- a.btn(href="/feedback/"+entryy._id+"/delete") Delete
+          
+            .clearfix
+        .clearfix
+-index1++;       
+br
+br
+br
+br
 -var index=0;
 each entry in reviews1
   .cart-items

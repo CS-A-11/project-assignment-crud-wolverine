@@ -32,7 +32,6 @@ module.exports.signUpCreate = function(req, res) {
       }
     }
   );
-   
 };
 
 

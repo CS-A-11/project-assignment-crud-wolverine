@@ -4314,7 +4314,7 @@ body {
   .mu-main-navbar {
 	background-color: transparent;
 	border: none;
-	padding: 20px 0;
+	padding: -5px 0;
 	border-radius: 0;
 	margin-bottom: 0;
 	-webkit-transition: all 0.5s;
@@ -4345,14 +4345,13 @@ body {
   .mu-main-navbar .mu-main-nav .dropdown-menu li a {
 	padding: 10px 20px;
   }
-  
   .mu-main-navbar .navbar-header .navbar-brand {
 	color: #333;
 	display: inline-block;
 	font-weight: 700;
 	font-size: 35px;  
-	padding: 0;
-	margin-top: 16px;
+	padding: 10px;
+	margin-top: 1px;
 	height: 34px;
 	width: 180px;
 	-webkit-transition: all 0.5s;

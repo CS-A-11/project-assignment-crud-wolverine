@@ -18,7 +18,8 @@ reviewSchema = new mongoose.Schema({
   email: { type: String, required: true },
   restName: { type: String, required: true },
   comments: { type: String },
-  ratings:{ type: Number}
+  ratings:{ type: Number},
+  userId:{type:String}
   // rest:{ type:mongoose.Schema.Types.ObjectId, ref: 'Restaurant'}
 });
 

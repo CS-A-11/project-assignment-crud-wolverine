@@ -1,15 +1,11 @@
 doctype html
 head
   title FoodSetGo
-
   
   link(rel='stylesheet', href='/stylesheets/bootstraporder.css')
   // jQuery (necessary for Bootstrap's JavaScript plugins)
   script(src='/javascripts/js/jquery.min1.js')
   // Custom Theme files
-  meta(name='viewport', content='width=device-width, initial-scale=1')
-  meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
-  //- link(href='StyleSheet1.css', rel='stylesheet', type='text/css', media='all')
   link(rel='stylesheet', href='/stylesheets/feedback.css')
   // Custom Theme files
   meta(name='viewport', content='width=device-width, initial-scale=1')
@@ -151,48 +147,24 @@ header#mu-header
       #navbar.navbar-collapse.collapse
         if user
           ul#top-menu.nav.navbar-nav.navbar-right.mu-main-nav
-
             li
-              a(href='/') HOME
-
+              a(href="/") HOME
             li
               a(href='/rest') RESTAURANT
-
-            li
-              a(href='/feedback/add') FEEDBACK
-
             li
               a(href='/logout') LOGOUT
 // banner
 #pic
   .center-container
     .main
-      h1.head FEEDBACK
+      h1.head EDIT FEEDBACK
       .main_grid
-        form.form_post(action='#', name='myform', method='post', onsubmit='return validation()')
-          .agileits_main_grid.l_main_grid
-            span.agileits_grid
-              label Your Name 
-              input#na(style='color:black', type='text', name='name', placeholder='Your Name', required='')
-          .agileits_main_grid.l_main_grid
-            span.agileits_grid
-              label Your Email 
-              input(style='color:black', type='text', name='email', placeholder='Your Email', required='')
-          .agileits_main_grid.l_main_grid
-            span.agileits_grid
-              label Resturant Name 
-              //input(style='color:black', type='text', name='restname', placeholder='Resturant Name', required='')
-              <input list="restname" name="restname", placeholder="Restaurant Name", required="">
-              <datalist id="restname">
-              <option value="Subway">
-              <option value="Pizza hut">
-              //<option value="Opera">
-              //<option value="Safari">
-              </datalist>
+        form.form_post(action='/feedback/'+myID.userId, name='myform', method='post', onsubmit='return validation()')
+        
           .agileits_main_grid.l_main_grid
             span.agileits_grid
               label Comments 
-            textarea#com(style='color:black', name='comment', rows='5', cols='40', placeholder='Comment')
+            textarea#com(style='color:black', name='comments',value=myComment, rows='5', cols='40', placeholder='Comment')
           .agileits_main_grid.l_main_grid
             span.agileits_grid
               label Rating 
@@ -200,3 +172,4 @@ header#mu-header
           .main_grid2
             .main_grid2_right
               input(type='Submit', value='Submit')
+
