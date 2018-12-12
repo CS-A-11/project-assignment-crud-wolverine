@@ -18,7 +18,7 @@ Heroku Link: https://shrouded-mesa-52848.herokuapp.com/
 1- Session Management<br />
 2- member can contact management<br />
 3- Member can submit reviews<br /> 
-4- Member can delete their own reviews<br />  
+4- Member can delete their own reviews
 5- Member can read reviews<br /> 
 6- Member can place order<br />
 7- Member can view menu<br />
