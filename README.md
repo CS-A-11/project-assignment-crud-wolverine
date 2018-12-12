@@ -11,10 +11,10 @@
 For all the food lovers who are eager to taste the yummiest food and never want to miss an opportunity to savor delicious items, FoodSetGo is the ideal platform for you. We provide food delivery services without charging a single rupee. All a customer needs is to enter his location, select restaurant from where he can order food and have it at his doorstep.
 
 Here are some common reasons, why you should always choose FoodSetGo to satisfy your hunger:<br />
- 1- No Frustration, No Misunderstanding Just go online, place your order and receive you favorite food at your home within few minutes.<br />
- 2- 24/7 service No matter when you are felling hungry, FoodSetGo is always available for your services. You can place your order at any time.<br />
- 3- Menu simpler to Manage An online menu is simple and easy to understand, as FoodSetGo gives you detail description of each item.<br />
- 4- Modify or cancel your order FoodSetGo offers the facility to our customers to change or cancel their order within 15 minutes after placing order.<br />
+ 1- **No Frustration, No Misunderstanding** Just go online, place your order and receive you favorite food at your home within few minutes.<br />
+ 2- **24/7 service** No matter when you are felling hungry, FoodSetGo is always available for your services. You can place your order at any time.<br />
+ 3- **Menu simpler to Manage** An online menu is simple and easy to understand, as FoodSetGo gives you detail description of each item.<br />
+ 4- **Modify or cancel your order** FoodSetGo offers the facility to our customers to change or cancel their order within 15 minutes after placing order.<br />
 
 "Bringing good food into your everyday." That's our mission. That means we don't just deliver--we bring it, always going the extra mile to make your experience memorable.
 
