@@ -15,8 +15,9 @@ Basically foodsetgo is a replica of food panda.A user can signup and login to hi
 Heroku Link: https://shrouded-mesa-52848.herokuapp.com/   
 
 ### USE CASES IMPLEMENTED
+
 1- Session Management<br />
-2- member can contact management<br />
+2- Member can contact management<br />
 3- Member can submit reviews<br /> 
 4- Member can delete their own reviews<br />
 5- Member can read reviews<br /> 
@@ -52,4 +53,3 @@ Hamna Faisal<br />
 
 Ahmad Saif<br /> 
 1- Content Writing of front end
-
