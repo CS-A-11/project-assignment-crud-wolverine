@@ -2,19 +2,19 @@
   FOODSETGO      
 
 ## GROUP MEMBERS
-1:MUNEEB AKHTAR
-2:HAMNA FAISAL
-3:ROSHAN UL HAQ
-4:AHMAD SAIF
+1- MUNEEB AKHTAR
+2- HAMNA FAISAL
+3- ROSHAN UL HAQ
+4- AHMAD SAIF
 
-## About  
+## ABOUT  
 Basically foodsetgo is a replica of food panda.A user can signup and login to his account. He can also give feedback to the existing restaurant. He can also contact for the query to the management. He can also see the reviews given by other customers as well.He can Delete his own review as well but he will not be able to delete other comments. He can place the order as well by picking up a particular restaurant. He can also see the menu by clicking the particluar retaurant . He can also see the details of the restaurant as well .   
 
 
 ## HOMEPAGE
 Heroku Link: https://shrouded-mesa-52848.herokuapp.com/   
 
-### Use cases implemented
+### USE CASES IMPLEMENTED
 1- Session Management
 2- member can contact management
 3- Member can submit reviews 
@@ -26,9 +26,9 @@ Heroku Link: https://shrouded-mesa-52848.herokuapp.com/
 9- Member can search for restaurants by name 
 10- Member can choose menu of their own choice
 
-## Schema
+## SCHEMA
 
-## Contributions
+## CONTRIBUTIONS
 
 Muneeb Akhtar
 1- Crud operations
