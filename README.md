@@ -7,8 +7,16 @@
 3- ROSHAN UL HAQ<br />
 4- AHMAD SAIF
 
-## ABOUT  
-Basically foodsetgo is a replica of food panda.A user can signup and login to his account. He can also give feedback to the existing restaurant. He can also contact for the query to the management. He can also see the reviews given by other customers as well.He can Delete his own review as well but he will not be able to delete other comments. He can place the order as well by picking up a particular restaurant. He can also see the menu by clicking the particluar retaurant . He can also see the details of the restaurant as well .   
+## ABOUT FOODSETGO
+For all the food lovers who are eager to taste the yummiest food and never want to miss an opportunity to savor delicious items, FoodSetGo is the ideal platform for you. We provide food delivery services without charging a single rupee. All a customer needs is to enter his location, select restaurant from where he can order food and have it at his doorstep.
+
+Here are some common reasons, why you should always choose FoodSetGo to satisfy your hunger:
+ 1- No Frustration, No Misunderstanding Just go online, place your order and receive you favorite food at your home within few minutes.
+ 2- 24/7 service No matter when you are felling hungry, FoodSetGo is always available for your services. You can place your order at any time.<br />
+ 3- Menu simpler to Manage An online menu is simple and easy to understand, as FoodSetGo gives you detail description of each item.<br />
+ 4- Modify or cancel your order FoodSetGo offers the facility to our customers to change or cancel their order within 15 minutes after placing order.<br />
+
+"Bringing good food into your everyday." That's our mission. That means we don't just deliver--we bring it, always going the extra mile to make your experience memorable.
 
 
 ## HOMEPAGE
@@ -29,12 +37,14 @@ Heroku Link: https://shrouded-mesa-52848.herokuapp.com/
 
 ## SCHEMA
 ### COLLECTIONS
-1- <br />
-2- <br />
+1- contact<br />
+2- menu<br />
+3- orders<br />
+4- restaurant<br />
+5- signup<br />
+6- review
 ### NESTED COLLECTIONS
-1- <br />
-2- <br />
-
+---
 ## CONTRIBUTIONS
 
 Muneeb Akhtar<br />
