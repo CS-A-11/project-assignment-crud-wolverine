@@ -15,35 +15,35 @@ Basically foodsetgo is a replica of food panda.A user can signup and login to hi
 Heroku Link: https://shrouded-mesa-52848.herokuapp.com/   
 
 ### USE CASES IMPLEMENTED
-1- Session Management
-2- member can contact management
-3- Member can submit reviews 
-4- Member can delete their own reviews  
-5- Member can read reviews 
-6- Member can place order
-7- Member can view menu
-8- Member can view restaurant information 
-9- Member can search for restaurants by name 
+1- Session Management<br />
+2- member can contact management<br />
+3- Member can submit reviews<br /> 
+4- Member can delete their own reviews<br />  
+5- Member can read reviews<br /> 
+6- Member can place order<br />
+7- Member can view menu<br />
+8- Member can view restaurant information<br /> 
+9- Member can search for restaurants by name<br /> 
 10- Member can choose menu of their own choice
 
 ## SCHEMA
 
 ## CONTRIBUTIONS
 
-Muneeb Akhtar
-1- Crud operations
-2- Handling front end (views, css, models)
+Muneeb Akhtar<br />
+1- Crud operations<br />
+2- Handling front end (views, css, models)<br />
 3- Session Management
 
-Roshan Ul Haq
+Roshan Ul Haq<br />
 1- Handling front end(website pages)
 
-Hamna Faisal
-1- Crud operations
-2- Handling views and models 
-3- Auto completion(Angular JS)
+Hamna Faisal<br />
+1- Crud operations<br />
+2- Handling views and models<br /> 
+3- Auto completion(Angular JS)<br />
 4- Session Management
 
-Ahmad Saif 
+Ahmad Saif<br /> 
 1- Content Writing of front end
 
