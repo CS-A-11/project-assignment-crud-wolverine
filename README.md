@@ -27,6 +27,12 @@ Heroku Link: https://shrouded-mesa-52848.herokuapp.com/
 10- Member can choose menu of their own choice
 
 ## SCHEMA
+### COLLECTIONS
+1- <br />
+2- <br />
+### NESTED COLLECTIONS
+1- <br />
+2- <br />
 
 ## CONTRIBUTIONS
 
